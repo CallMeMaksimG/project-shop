@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', function(){
     document.querySelector('#burger').addEventListener('click', function(){
         document.querySelector('.navbar').classList.toggle('open');
+        document.querySelector('body').classList.toggle('lock');
         document.querySelector('.search-burger').classList.toggle('open');
         document.querySelector('.account-burger').classList.toggle('open');
         if(document.querySelector('.shadow').style.display == 'none'){
-
+           
             document.querySelector('.shadow').style.display = 'block';
         }else {
             document.querySelector('.shadow').style.display = 'none';
