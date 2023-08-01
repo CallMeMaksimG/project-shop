@@ -606,6 +606,9 @@ color: #807f7d;
   .counter-favorites {
     margin-top: 23px!important;
   }
+  .btn-up_hide {
+    display: none!important;
+  }
 }
 
 
