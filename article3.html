@@ -1,228 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Акустическая система</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
-    <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Акустическая система</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
+  <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
-    <div class="shadow" style="position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0.8; z-index: 1; display: none;"></div>
-    <header class="navbar">
-      <div class="container">
-          <div class="nav-wrapper">
-            <button class="burger-btn" id="burger">
-              <span></span><span></span><span></span>
-            </button>
-              <a href="index.html">
-                  <h1 class="title">AUDIO EDEN</h1>
-              </a>
-                <ul class="menu">
-                  <li class="search-burger"><button class="search-brgr" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
-                  <li class="account-burger"><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
-                    <li><button class="accordion-btn"></button><a href="vinylPlayers.php" class="category">Виниловые проигрыватели</a></li>
-                    <li><button class="accordion-btn"></button><a href="amplifier.php" class="category">Усилители</a></li>
-                    <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="acoustics.php" class="category">Акустика</a>
-                    <ul class="subcategory">
-                        <li><a href="acoustics.php#floor-acoustic">Напольная акустика</a></li>
-                        <li><a href="acoustics.php#bookshelf-acoustic">Полочная акустика</a></li>
-                        <li><a href="acoustics.php#subwoofer-acoustic">Сабвуферы</a></li>
-                        <li><a href="acoustics.php#portable-acoustic">Беспроводная акустика</a></li>
-                    </ul>
-                    </li>
-                    <li class="category-wrapper"><button  class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="vinylRecords.php" class="category">Виниловые пластинки</a>
-                    <ul class="subcategory">
-                      <li><a href="vinylRecords.php#jazz">Джаз</a></li>
-                      <li><a href="vinylRecords.php#classical">Классическая</a></li>
-                      <li><a href="vinylRecords.php#pop">Популярная музыка</a></li>
-                      <li><a href="vinylRecords.php#reggae">Регги</a></li>
-                      <li><a href="vinylRecords.php#rock">Рок</a></li>
-                      <li><a href="vinylRecords.php#hip-hop">Хип-хоп</a></li>
-                      <li><a href="vinylRecords.php#electronic">Электронная</a></li>
-                    </ul>
-                    </li>
-                    <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="accessories.php" class="category">Аксессуары</a>
-                    <ul class="subcategory">
-                      <li><a href="accessories.php#cable">Акустические кабели</a></li>
-                      <li><a href="accessories.php#pickup">Головки звукоснимателя</a></li>
-                      <li><a href="accessories.php#needle">Иглы</a></li>
-                      <li><a href="accessories.php#headshell">Хедшеллы</a></li>
-                    </ul>
-                    </li>
-                    <li><button class="search" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
-                </ul>
-                    <ul class="menu-fav-basket">
-                      <li><a href="favorites.html"><img class="nav-icon like" src="image/icon/like.png" alt="like"></a><div class="counter-favorites">0</div></li>
-                      <li>
-                        <div class="basket-all-wrapper">
-                          <img id="basket" class="nav-icon" src="image/icon/basket.png" alt="basket"><div class="counter-total-basket">0</div>
-                      
-                                            <div class="drop-down-basket">
-                          <div class="drop-down-basket-title">
-                            <h3>Корзина</h3>
-                          </div>
-                          <div class="empty-basket">
-                            <img src="image/icon/shopping-bag.jpg" alt="basket">
-                            <p>В корзине пусто</p>
-                          </div>
-                      
-                          <div class="drop-down-basket-item-wrapper">
-                      
-                          </div>
-                          <div class="close-basket"><img src="image/icon/close.png" alt="close"></div>
-                          <div class="footer-drop-down-basket none">
-                            <div class="sum">
-                              <p>Сумма заказа:</p>
-                              <p ><span class="total-price">0</span> <span class="currency">&#8381</span></p>
-                            </div>
-                      
-                            <div class="button-wrapper">
-                              <button id="checkout">Оформить заказ</button>
-                            </div>
-                          </div>
-                      
-                      
-                                            </div>
-                        </div>
-                        <div class="drop-down-basket">
-                            <div class="drop-down-basket-title">
-                              <h3>Корзина</h3>
-                            </div>
-                            <div class="drop-down-basket-item-wrapper">
-                            </div>
-                            <div class="button-wrapper">
-                              <button id="checkout">Оформить заказ</button>
-                            </div>
-                      
-                        </div>
-                      </li>
-                    </ul>
-                    <ul class="account-icon">
-
-                    
-                    <li><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
-                </ul>
-
-
-                
-                      <div id="search_bar">
-                  
-                  <form action="search.php" method="post">
-                    <input type="search" name="search" placeholder="Поиск">
-                    <button type="submit"><img src="image/icon/search.png" alt=""></button>
-                    <button type="button" id="close" value="Click" onmousedown="closeSearchBar()"> Закрыть </button>
-                  </form>
-                
-              </div>
-</header>
-<section class="nav-catalog">
+  <div class="shadow"
+    style="position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0.8; z-index: 1; display: none;">
+  </div>
+  <header class="navbar">
     <div class="container">
-        <div class="nav-catalog-wrapper">
-            <ul>
-                <li><a href="index.html">Главная</a></li> <span>/</span>
-                <li><a href="blog.html">Блог</a></li> <span>/</span>
-                <li>О АКУСТИЧЕСКИХ СИСТЕМАХ</li>
+      <div class="nav-wrapper">
+        <button class="burger-btn" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="index.html">
+          <h1 class="title">AUDIO EDEN</h1>
+        </a>
+        <ul class="menu">
+          <li class="search-burger"><button class="search-brgr" value="Click" onmousedown="openSearchBar()"><img
+                class="nav-icon" src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+          <li class="account-burger"><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account"
+                src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+          <li><button class="accordion-btn"></button><a href="vinylPlayers.php" class="category">Виниловые
+              проигрыватели</a></li>
+          <li><button class="accordion-btn"></button><a href="amplifier.php" class="category">Усилители</a></li>
+          <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png"
+                alt=""></button><a href="acoustics.php" class="category">Акустика</a>
+            <ul class="subcategory">
+              <li><a href="acoustics.php#floor-acoustic">Напольная акустика</a></li>
+              <li><a href="acoustics.php#bookshelf-acoustic">Полочная акустика</a></li>
+              <li><a href="acoustics.php#subwoofer-acoustic">Сабвуферы</a></li>
+              <li><a href="acoustics.php#portable-acoustic">Беспроводная акустика</a></li>
             </ul>
-        </div>
-    </div>
-</section>
-<main>
-    <article>
-        <div class="container">
-            <div class="article-wrapper">
-                <h1>Акустическая система</h1>
-                <img class="main-image-article" src="image/article/speaker9.jpg" alt="speaker">
-                <div class="text-article">
-                    <p>Акусти́ческая систе́ма (АС) — устройство для воспроизведения звука, конечное звено усилительного тракта
-                         (источник — усилитель — АС); состоит из акустического оформления и вмонтированных в него излучающих 
-                         головок (обычно динамических).</p>
-                    <p>Акустическая система может быть однополосной (один широкополосный излучатель, например, динамическая головка) 
-                        и многополосной (две и более головок, каждая из которых создаёт излучение в своей частотной полосе).</p>
-                    <p>Однополосная система не позволяет добиться качественного звука во всей полосе частот ввиду трудностей создания 
-                        излучателя, одинаково хорошо воспроизводящего сигналы во всём воспроизводимом диапазоне слышимых человеком 
-                        звуковых частот (20 — 20 000 Гц). Также — высокие интермодуляционные искажения при значительном ходе одного 
-                        излучателя, вызваны эффектом Доплера.</p>
-                    <p>В многополосных системах спектр всех слышимых частот разбивается на несколько перекрываемых между собой диапазонов, 
-                        посредством фильтров (комбинации резисторов, конденсаторов и катушек индуктивности, или с помощью цифрового кроссовера). 
-                        Каждый диапазон подаётся на свою динамическую головку, которая имеет наилучшие характеристики в этом диапазоне. 
-                        Таким образом достигается наиболее высококачественное воспроизведение слышимых человеком звуковых частот.
-                    <ul>
-                        <li>2-полосная схема (НЧ/СЧ + ВЧ динамик)</li>
-                        <li>3-полосная схема (НЧ + СЧ + ВЧ динамик)</li>
-                        <li>2,5-полосная схема (СЧ/НЧ-динамик озвучивает как низкочастотную, так и среднечастотную области; НЧ динамик лишь 
-                            «помогает» первому на самых нижних регистрах, но не замещает его в этом диапазоне. Зачастую, в экономических целях, 
-                            производителями применяются оба динамика одного типа, регулируя разделительную полосу фильтрами)</li>
-                        <li>4-полосная схема</li>
-                    </ul></p>
-                </div>
-                <div class="other-image-article">
-                    <img class="no-margin-left" src="image/article/speaker6.jpg" alt="speaker">
-                    <img src="image/article/speaker8.jpg" alt="speaker">
-                </div>
-                <div class="text-article">
-                    <h2>Активные и пассивные системы</h2>
-                    <p>Акустические системы подразделяются на пассивные (состоят только из излучателя и кроссовера) и активные (содержат также
-                         усилитель мощности). <br>
-                         Усилитель встраивают внутрь акустической системы по трем причинам:
-                        <ol>
-                            <li>облегчается согласование усилителя и излучателей по мощности и другим параметрам, вопросами согласования занимается 
-                                производитель акустической системы, а не конечный потребитель</li>
-                            <li>уменьшается стоимость системы, так как нет необходимости в отдельном корпусе для усилителя и мощность усилителя 
-                                    (определяющая его стоимость) не завышена</li>
-                            <li>нет необходимости в кабеле большого сечения (в случае, если усилитель находится в каждой акустической системе)</li>   
-                        </ol> 
-                            <span>однако есть и недостатки:</span>
-                    <ol>
-                        <li>затрудняется обслуживание усилителя, так как акустическая система может быть установлена в труднодоступном месте (например, 
-                            быть подвешена на некоторой высоте)</li>
-                        <li>в случае мощных акустических систем усилитель обычно устанавливается в каждую систему, что требует в сравнении с пассивной 
-                            стереосистемой двух блоков питания вместо одного, что увеличивает стоимость</li>
-                        <li>в случае большого расстояния между акустической системой и источником звука требуется принимать специальные меры по защите сигнала 
-                            (поднимать его уровень и использовать балансное подключение)</li>
-                    </ol>
-                    <span>
-                        Таким образом, активные акустические системы обычно используются для персональных компьютеров, озвучивания небольших концертных площадок,
-                        дискотек, в студийных мониторах. Пассивные чаще встречаются в домашних акустических системах, а также при озвучивании больших площадок.
-                    </span>
-                </p>
-                </div>
-                <img class="main-image-article" src="image/article/speaker.jpg" alt="speaker">
-                <div class="text-article">
-                    <p>
-                        Для подключения пассивной акустической системы к усилителю обычно используют следующие типы соединений:
-                        <ol>
-                            <li>Клеммы или зажимные колодки — в основном домашние акустические системы и системы небольшой мощности</li>
-                            <li>Разъёмы типа Speakon — профессиональные системы большой мощности.</li>
-                        </ol>
-                        <span>Активные акустические системы обычно подключаются к источнику звука с помощью:</span>
-                        <ol>
-                            <li>Разъёмов типа Jack 3,5 мм, RCA — бытовые акустические системы</li>
-                            <li>Разъёмов типа Jack 6,3 мм, XLR — профессиональные акустические системы</li>
-                        </ol>
-                        <span>В современных домашних кинотеатрах используются также беспроводное соединение с использованием передатчика и радиоприёмника, 
-                            настроенного на нужную частоту.</span>
-                    </p>
-                </div>
-                <div class="other-image-article">
-                    <img class="no-margin-left" src="image/article/speaker7.jpg" alt="speaker">
-                    <img src="image/article/speaker3.jpg" alt="speaker">
-                </div>
-                <div class="text-article">
-                    <p>Если расстояние между усилителем и пассивной акустической системой превышает несколько десятков метров, потери мощности в соединительных 
-                        проводах достигают значительной величины. Поэтому для озвучивания больших площадей и объектов применяются специальные трансляционные усилители 
-                        и акустические системы. На выходе трансляционного усилителя имеется трансформатор, повышающий в несколько раз выходное напряжение звукового сигнала, 
-                        а трансляционные акустические системы содержат понижающий трансформатор с таким же соотношением витков, что и в усилителе.</p>
-                        <p>Недопустимо подключать к трансляционному усилителю обычные акустические системы без трансформатора, это приведёт к выходу их из строя.</p>
-                </div>
-                <a href="https://ru.wikipedia.org/wiki/Акустическая_система" target="_blank">Источник</a>
-            </div>
-        </div>
-    </article>
-</main>
+          </li>
+          <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png"
+                alt=""></button><a href="vinylRecords.php" class="category">Виниловые пластинки</a>
+            <ul class="subcategory">
+              <li><a href="vinylRecords.php#jazz">Джаз</a></li>
+              <li><a href="vinylRecords.php#classical">Классическая</a></li>
+              <li><a href="vinylRecords.php#pop">Популярная музыка</a></li>
+              <li><a href="vinylRecords.php#reggae">Регги</a></li>
+              <li><a href="vinylRecords.php#rock">Рок</a></li>
+              <li><a href="vinylRecords.php#hip-hop">Хип-хоп</a></li>
+              <li><a href="vinylRecords.php#electronic">Электронная</a></li>
+            </ul>
+          </li>
+          <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png"
+                alt=""></button><a href="accessories.php" class="category">Аксессуары</a>
+            <ul class="subcategory">
+              <li><a href="accessories.php#cable">Акустические кабели</a></li>
+              <li><a href="accessories.php#pickup">Головки звукоснимателя</a></li>
+              <li><a href="accessories.php#needle">Иглы</a></li>
+              <li><a href="accessories.php#headshell">Хедшеллы</a></li>
+            </ul>
+          </li>
+          <li><button class="search" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"
+                src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+        </ul>
+        <ul class="menu-fav-basket">
+          <li><a href="favorites.html"><img class="nav-icon like" src="image/icon/like.png" alt="like"></a>
+            <div class="counter-favorites">0</div>
+          </li>
+          <li>
+            <div class="basket-all-wrapper">
+              <img id="basket" class="nav-icon" src="image/icon/basket.png" alt="basket">
+              <div class="counter-total-basket">0</div>
 
-<footer>
+              <div class="drop-down-basket">
+                <div class="drop-down-basket-title">
+                  <h3>Корзина</h3>
+                </div>
+                <div class="empty-basket">
+                  <img src="image/icon/shopping-bag.jpg" alt="basket">
+                  <p>В корзине пусто</p>
+                </div>
+                <div class="drop-down-basket-item-wrapper">
+                </div>
+                <div class="close-basket"><img src="image/icon/close.png" alt="close"></div>
+                <div class="footer-drop-down-basket none">
+                  <div class="sum">
+                    <p>Сумма заказа:</p>
+                    <p><span class="total-price">0</span> <span class="currency">&#8381</span></p>
+                  </div>
+                  <div class="button-wrapper">
+                    <button id="checkout">Оформить заказ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="drop-down-basket">
+              <div class="drop-down-basket-title">
+                <h3>Корзина</h3>
+              </div>
+              <div class="drop-down-basket-item-wrapper">
+              </div>
+              <div class="button-wrapper">
+                <button id="checkout">Оформить заказ</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="account-icon">
+          <li><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png"
+                alt="user"><span class="text-account">Аккаунт</span></a></li>
+        </ul>
+        <div id="search_bar">
+          <form action="search.php" method="post">
+            <input type="search" name="search" placeholder="Поиск">
+            <button type="submit"><img src="image/icon/search.png" alt=""></button>
+            <button type="button" id="close" value="Click" onmousedown="closeSearchBar()"> Закрыть </button>
+          </form>
+        </div>
+  </header>
+  <section class="nav-catalog">
+    <div class="container">
+      <div class="nav-catalog-wrapper">
+        <ul>
+          <li><a href="index.html">Главная</a></li> <span>/</span>
+          <li><a href="blog.html">Блог</a></li> <span>/</span>
+          <li>О АКУСТИЧЕСКИХ СИСТЕМАХ</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <main>
+    <article>
+      <div class="container">
+        <div class="article-wrapper">
+          <h1>Акустическая система</h1>
+          <img class="main-image-article" src="image/article/speaker9.jpg" alt="speaker">
+          <div class="text-article">
+            <p>Акусти́ческая систе́ма (АС) — устройство для воспроизведения звука, конечное звено усилительного тракта
+              (источник — усилитель — АС); состоит из акустического оформления и вмонтированных в него излучающих
+              головок (обычно динамических).</p>
+            <p>Акустическая система может быть однополосной (один широкополосный излучатель, например, динамическая
+              головка)
+              и многополосной (две и более головок, каждая из которых создаёт излучение в своей частотной полосе).</p>
+            <p>Однополосная система не позволяет добиться качественного звука во всей полосе частот ввиду трудностей
+              создания
+              излучателя, одинаково хорошо воспроизводящего сигналы во всём воспроизводимом диапазоне слышимых человеком
+              звуковых частот (20 — 20 000 Гц). Также — высокие интермодуляционные искажения при значительном ходе
+              одного
+              излучателя, вызваны эффектом Доплера.</p>
+            <p>В многополосных системах спектр всех слышимых частот разбивается на несколько перекрываемых между собой
+              диапазонов,
+              посредством фильтров (комбинации резисторов, конденсаторов и катушек индуктивности, или с помощью
+              цифрового кроссовера).
+              Каждый диапазон подаётся на свою динамическую головку, которая имеет наилучшие характеристики в этом
+              диапазоне.
+              Таким образом достигается наиболее высококачественное воспроизведение слышимых человеком звуковых частот.
+            <ul>
+              <li>2-полосная схема (НЧ/СЧ + ВЧ динамик)</li>
+              <li>3-полосная схема (НЧ + СЧ + ВЧ динамик)</li>
+              <li>2,5-полосная схема (СЧ/НЧ-динамик озвучивает как низкочастотную, так и среднечастотную области; НЧ
+                динамик лишь
+                «помогает» первому на самых нижних регистрах, но не замещает его в этом диапазоне. Зачастую, в
+                экономических целях,
+                производителями применяются оба динамика одного типа, регулируя разделительную полосу фильтрами)</li>
+              <li>4-полосная схема</li>
+            </ul>
+            </p>
+          </div>
+          <div class="other-image-article">
+            <img class="no-margin-left" src="image/article/speaker6.jpg" alt="speaker">
+            <img src="image/article/speaker8.jpg" alt="speaker">
+          </div>
+          <div class="text-article">
+            <h2>Активные и пассивные системы</h2>
+            <p>Акустические системы подразделяются на пассивные (состоят только из излучателя и кроссовера) и активные
+              (содержат также
+              усилитель мощности). <br>
+              Усилитель встраивают внутрь акустической системы по трем причинам:
+            <ol>
+              <li>облегчается согласование усилителя и излучателей по мощности и другим параметрам, вопросами
+                согласования занимается
+                производитель акустической системы, а не конечный потребитель</li>
+              <li>уменьшается стоимость системы, так как нет необходимости в отдельном корпусе для усилителя и мощность
+                усилителя
+                (определяющая его стоимость) не завышена</li>
+              <li>нет необходимости в кабеле большого сечения (в случае, если усилитель находится в каждой акустической
+                системе)</li>
+            </ol>
+            <span>однако есть и недостатки:</span>
+            <ol>
+              <li>затрудняется обслуживание усилителя, так как акустическая система может быть установлена в
+                труднодоступном месте (например,
+                быть подвешена на некоторой высоте)</li>
+              <li>в случае мощных акустических систем усилитель обычно устанавливается в каждую систему, что требует в
+                сравнении с пассивной
+                стереосистемой двух блоков питания вместо одного, что увеличивает стоимость</li>
+              <li>в случае большого расстояния между акустической системой и источником звука требуется принимать
+                специальные меры по защите сигнала
+                (поднимать его уровень и использовать балансное подключение)</li>
+            </ol>
+            <span>
+              Таким образом, активные акустические системы обычно используются для персональных компьютеров, озвучивания
+              небольших концертных площадок,
+              дискотек, в студийных мониторах. Пассивные чаще встречаются в домашних акустических системах, а также при
+              озвучивании больших площадок.
+            </span>
+            </p>
+          </div>
+          <img class="main-image-article" src="image/article/speaker.jpg" alt="speaker">
+          <div class="text-article">
+            <p>
+              Для подключения пассивной акустической системы к усилителю обычно используют следующие типы соединений:
+            <ol>
+              <li>Клеммы или зажимные колодки — в основном домашние акустические системы и системы небольшой мощности
+              </li>
+              <li>Разъёмы типа Speakon — профессиональные системы большой мощности.</li>
+            </ol>
+            <span>Активные акустические системы обычно подключаются к источнику звука с помощью:</span>
+            <ol>
+              <li>Разъёмов типа Jack 3,5 мм, RCA — бытовые акустические системы</li>
+              <li>Разъёмов типа Jack 6,3 мм, XLR — профессиональные акустические системы</li>
+            </ol>
+            <span>В современных домашних кинотеатрах используются также беспроводное соединение с использованием
+              передатчика и радиоприёмника,
+              настроенного на нужную частоту.</span>
+            </p>
+          </div>
+          <div class="other-image-article">
+            <img class="no-margin-left" src="image/article/speaker7.jpg" alt="speaker">
+            <img src="image/article/speaker3.jpg" alt="speaker">
+          </div>
+          <div class="text-article">
+            <p>Если расстояние между усилителем и пассивной акустической системой превышает несколько десятков метров,
+              потери мощности в соединительных
+              проводах достигают значительной величины. Поэтому для озвучивания больших площадей и объектов применяются
+              специальные трансляционные усилители
+              и акустические системы. На выходе трансляционного усилителя имеется трансформатор, повышающий в несколько
+              раз выходное напряжение звукового сигнала,
+              а трансляционные акустические системы содержат понижающий трансформатор с таким же соотношением витков,
+              что и в усилителе.</p>
+            <p>Недопустимо подключать к трансляционному усилителю обычные акустические системы без трансформатора, это
+              приведёт к выходу их из строя.</p>
+          </div>
+          <a href="https://ru.wikipedia.org/wiki/Акустическая_система" target="_blank">Источник</a>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer>
     <div class="container">
       <div class="footer-wrapper">
         <div class="info">
@@ -234,23 +260,22 @@
             <li><a href="#">Политика конфиденциальности</a></li>
           </ul>
         </div>
-          <div class="support">
-            <ul>
-              <li class="footer-title">Поддержка</li>
-              <li><a href="#">Помощь покупателю</a></li>
-              <li><a href="#">Доставка и оплата</a></li>
-              <li><a href="#">Возврат</a></li>
-            </ul>
-          </div>
-          <div class="social-media">
-            <ul>
-              <li class="footer-title">Социальные сети</li>
-              <li><a href="#"><img src="image/icon/vk.png" alt="vk">Вконтакте</a></li>
-              <li><a href="#"><img src="image/icon/telegram.png" alt="telegram">Telegram</a></li>
-            </ul>
-          </div>
+        <div class="support">
+          <ul>
+            <li class="footer-title">Поддержка</li>
+            <li><a href="#">Помощь покупателю</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Возврат</a></li>
+          </ul>
+        </div>
+        <div class="social-media">
+          <ul>
+            <li class="footer-title">Социальные сети</li>
+            <li><a href="#"><img src="image/icon/vk.png" alt="vk">Вконтакте</a></li>
+            <li><a href="#"><img src="image/icon/telegram.png" alt="telegram">Telegram</a></li>
+          </ul>
+        </div>
       </div>
-      
     </div>
   </footer>
   <div class="btn-up"><img src="image/icon/up.png" alt="up"></div>
@@ -267,4 +292,5 @@
   <script src="JS/showFavoritesCounter.js"></script>
   <script src="JS/showBasketCounter.js"></script>
 </body>
+
 </html>

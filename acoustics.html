@@ -1,412 +1,445 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Акустика</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
-    <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Акустика</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
+  <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
-  <div class="shadow" style="position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0.8; z-index: 1; display: none;"></div>
+  <div class="shadow"
+    style="position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0.8; z-index: 1; display: none;">
+  </div>
   <header class="navbar">
     <div class="container">
-        <div class="nav-wrapper">
-          <button class="burger-btn" id="burger">
-            <span></span><span></span><span></span>
-          </button>
-            <a href="index.html">
-                <h1 class="title">AUDIO EDEN</h1>
-            </a>
-              <ul class="menu">
-                <li class="search-burger"><button class="search-brgr" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
-                <li class="account-burger"><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
-                  <li><button class="accordion-btn"></button><a href="vinylPlayers.html" class="category">Виниловые проигрыватели</a></li>
-                  <li><button class="accordion-btn"></button><a href="amplifier.html" class="category">Усилители</a></li>
-                  <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="acoustics.html" class="category">Акустика</a>
-                  <ul class="subcategory">
-                      <li><a href="acoustics.html#floor-acoustic">Напольная акустика</a></li>
-                      <li><a href="acoustics.html#bookshelf-acoustic">Полочная акустика</a></li>
-                      <li><a href="acoustics.html#subwoofer-acoustic">Сабвуферы</a></li>
-                      <li><a href="acoustics.html#portable-acoustic">Беспроводная акустика</a></li>
-                  </ul>
-                  </li>
-                  <li class="category-wrapper"><button  class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="vinylRecords.html" class="category">Виниловые пластинки</a>
-                  <ul class="subcategory">
-                    <li><a href="vinylRecords.html#jazz">Джаз</a></li>
-                    <li><a href="vinylRecords.html#classical">Классическая</a></li>
-                    <li><a href="vinylRecords.html#pop">Популярная музыка</a></li>
-                    <li><a href="vinylRecords.html#reggae">Регги</a></li>
-                    <li><a href="vinylRecords.html#rock">Рок</a></li>
-                    <li><a href="vinylRecords.html#hip-hop">Хип-хоп</a></li>
-                    <li><a href="vinylRecords.html#electronic">Электронная</a></li>
-                  </ul>
-                  </li>
-                  <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="accessories.html" class="category">Аксессуары</a>
-                  <ul class="subcategory">
-                    <li><a href="accessories.html#cable">Акустические кабели</a></li>
-                    <li><a href="accessories.html#pickup">Головки звукоснимателя</a></li>
-                    <li><a href="accessories.html#needle">Иглы</a></li>
-                    <li><a href="accessories.html#headshell">Хедшеллы</a></li>
-                  </ul>
-                  </li>
-                  <li><button class="search" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
-              </ul>
-                  <ul class="menu-fav-basket">
-                    <li><a href="favorites.html"><img class="nav-icon like" src="image/icon/like.png" alt="like"></a><div class="counter-favorites">0</div></li>
-                    <li>
-                      <div class="basket-all-wrapper">
-                        <img id="basket" class="nav-icon" src="image/icon/basket.png" alt="basket"><div class="counter-total-basket">0</div>
-                    
-                                          <div class="drop-down-basket">
-                        <div class="drop-down-basket-title">
-                          <h3>Корзина</h3>
-                        </div>
-                        <div class="empty-basket">
-                          <img src="image/icon/shopping-bag.jpg" alt="basket">
-                          <p>В корзине пусто</p>
-                        </div>
-                    
-                        <div class="drop-down-basket-item-wrapper">
-                    
-                        </div>
-                        <div class="close-basket"><img src="image/icon/close.png" alt="close"></div>
-                        <div class="footer-drop-down-basket none">
-                          <div class="sum">
-                            <p>Сумма заказа:</p>
-                            <p ><span class="total-price">0</span> <span class="currency">&#8381</span></p>
-                          </div>
-                    
-                          <div class="button-wrapper">
-                            <button id="checkout">Оформить заказ</button>
-                          </div>
-                        </div>
-                    
-                    
-                                          </div>
-                      </div>
-                      <div class="drop-down-basket">
-                          <div class="drop-down-basket-title">
-                            <h3>Корзина</h3>
-                          </div>
-                          <div class="drop-down-basket-item-wrapper">
-                          </div>
-                          <div class="button-wrapper">
-                            <button id="checkout">Оформить заказ</button>
-                          </div>
-                    
-                      </div>
-                    </li>
-                  </ul>
-                  <ul class="account-icon">
-
-                  
-                  <li><a href="enter.html" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
-              </ul>
-
-
-              
-                    <div id="search_bar">
-                
-                <form>
-                  <input name="search" type="search" placeholder="Поиск">
-                  <button type="submit"><img src="image/icon/search.png" alt=""></button>
-                  <button type="button" id="close" value="Click" onmousedown="closeSearchBar()"> Закрыть </button>
-                </form>
-              
-            </div>
-</header>
-<section class="nav-catalog">
-    <div class="container">
-        <div class="nav-catalog-wrapper">
-            <ul >
-                <li><a href="index.html">Главная</a></li> <span>/</span>
-                <li><a href="#floor-acoustic">Напольная акустика</a></li> <span>/</span>
-                <li><a href="#bookshelf-acoustic">Полочная акустика</a></li> <span>/</span>
-                <li><a href="#subwoofer-acoustic">Сабвуферы</a></li> <span>/</span>
-                <li><a href="#portable-acoustic">Беспроводная акустика</a></li>
+      <div class="nav-wrapper">
+        <button class="burger-btn" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="index.html">
+          <h1 class="title">AUDIO EDEN</h1>
+        </a>
+        <ul class="menu">
+          <li class="search-burger"><button class="search-brgr" value="Click" onmousedown="openSearchBar()"><img
+                class="nav-icon" src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+          <li class="account-burger"><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account"
+                src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+          <li><button class="accordion-btn"></button><a href="vinylPlayers.html" class="category">Виниловые
+              проигрыватели</a></li>
+          <li><button class="accordion-btn"></button><a href="amplifier.html" class="category">Усилители</a></li>
+          <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png"
+                alt=""></button><a href="acoustics.html" class="category">Акустика</a>
+            <ul class="subcategory">
+              <li><a href="acoustics.html#floor-acoustic">Напольная акустика</a></li>
+              <li><a href="acoustics.html#bookshelf-acoustic">Полочная акустика</a></li>
+              <li><a href="acoustics.html#subwoofer-acoustic">Сабвуферы</a></li>
+              <li><a href="acoustics.html#portable-acoustic">Беспроводная акустика</a></li>
             </ul>
+          </li>
+          <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png"
+                alt=""></button><a href="vinylRecords.html" class="category">Виниловые пластинки</a>
+            <ul class="subcategory">
+              <li><a href="vinylRecords.html#jazz">Джаз</a></li>
+              <li><a href="vinylRecords.html#classical">Классическая</a></li>
+              <li><a href="vinylRecords.html#pop">Популярная музыка</a></li>
+              <li><a href="vinylRecords.html#reggae">Регги</a></li>
+              <li><a href="vinylRecords.html#rock">Рок</a></li>
+              <li><a href="vinylRecords.html#hip-hop">Хип-хоп</a></li>
+              <li><a href="vinylRecords.html#electronic">Электронная</a></li>
+            </ul>
+          </li>
+          <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png"
+                alt=""></button><a href="accessories.html" class="category">Аксессуары</a>
+            <ul class="subcategory">
+              <li><a href="accessories.html#cable">Акустические кабели</a></li>
+              <li><a href="accessories.html#pickup">Головки звукоснимателя</a></li>
+              <li><a href="accessories.html#needle">Иглы</a></li>
+              <li><a href="accessories.html#headshell">Хедшеллы</a></li>
+            </ul>
+          </li>
+          <li><button class="search" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"
+                src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+        </ul>
+        <ul class="menu-fav-basket">
+          <li><a href="favorites.html"><img class="nav-icon like" src="image/icon/like.png" alt="like"></a>
+            <div class="counter-favorites">0</div>
+          </li>
+          <li>
+            <div class="basket-all-wrapper">
+              <img id="basket" class="nav-icon" src="image/icon/basket.png" alt="basket">
+              <div class="counter-total-basket">0</div>
+
+              <div class="drop-down-basket">
+                <div class="drop-down-basket-title">
+                  <h3>Корзина</h3>
+                </div>
+                <div class="empty-basket">
+                  <img src="image/icon/shopping-bag.jpg" alt="basket">
+                  <p>В корзине пусто</p>
+                </div>
+
+                <div class="drop-down-basket-item-wrapper">
+
+                </div>
+                <div class="close-basket"><img src="image/icon/close.png" alt="close"></div>
+                <div class="footer-drop-down-basket none">
+                  <div class="sum">
+                    <p>Сумма заказа:</p>
+                    <p><span class="total-price">0</span> <span class="currency">&#8381</span></p>
+                  </div>
+
+                  <div class="button-wrapper">
+                    <button id="checkout">Оформить заказ</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="drop-down-basket">
+              <div class="drop-down-basket-title">
+                <h3>Корзина</h3>
+              </div>
+              <div class="drop-down-basket-item-wrapper">
+              </div>
+              <div class="button-wrapper">
+                <button id="checkout">Оформить заказ</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="account-icon">
+          <li><a href="enter.html" class="account-header-wrapper"><img class="nav-icon account"
+                src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+        </ul>
+        <div id="search_bar">
+          <form>
+            <input name="search" type="search" placeholder="Поиск">
+            <button type="submit"><img src="image/icon/search.png" alt=""></button>
+            <button type="button" id="close" value="Click" onmousedown="closeSearchBar()"> Закрыть </button>
+          </form>
         </div>
+  </header>
+  <section class="nav-catalog">
+    <div class="container">
+      <div class="nav-catalog-wrapper">
+        <ul>
+          <li><a href="index.html">Главная</a></li> <span>/</span>
+          <li><a href="#floor-acoustic">Напольная акустика</a></li> <span>/</span>
+          <li><a href="#bookshelf-acoustic">Полочная акустика</a></li> <span>/</span>
+          <li><a href="#subwoofer-acoustic">Сабвуферы</a></li> <span>/</span>
+          <li><a href="#portable-acoustic">Беспроводная акустика</a></li>
+        </ul>
+      </div>
     </div>
-</section>
-<main>
-  <div class="container">
-    <h2><a id="floor-acoustic">Напольная акустика</a></h2>
-    <div class="item-card-wrapper">
-      <article class="card" data-id="0041">
-        <a href="#"><img class='card-image' src="image/card/acoustic/floor/dali_spektor_6_1.png" alt="Dali Spektor 6 Black"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Dali Spektor 6 Black</a></p>
-        </div>
-        <p class="name-category-card">Напольная акустика</p>
-        <p class="price-item">49 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0042">
-        <a href="#"><img class='card-image' src="image/card/acoustic/floor/beoplay.png" alt="Bang & Olufsen BeoPlay A9 4nd Gen White"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Bang & Olufsen BeoPlay A9 4nd Gen White</a></p>
-        </div>
-        <p class="name-category-card">Напольная акустика</p>
-        <p class="price-item">399 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0043">
-        <a href="#"><img class='card-image' src="image/card/acoustic/floor/B_W_702_S3_Gloss_Black_1.png" alt="Bowers & Wilkins 703 S3 Gloss Black"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Bowers & Wilkins 703 S3 Gloss Black</a></p>
-        </div>
-        <p class="name-category-card">Напольная акустика</p>
-        <p class="price-item">534 000 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article> 
-      <article class="card" data-id="0044">
-        <a href="#"><img class='card-image' src="image/card/acoustic/floor/focal_chora_826_931912828_1.png" alt="Focal Chora 826 Dark Wood"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Focal Chora 826 Dark Wood</a></p>
-        </div>
-        <p class="name-category-card">Напольная акустика</p>
-        <p class="price-item">129 900 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0045">
-        <a href="#"><img class='card-image' src="image/card/acoustic/floor/yamaha_ns_777_1.png" alt="Yamaha NS-777"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Yamaha NS-777</a></p>
-        </div>
-        <p class="name-category-card">Напольная акустика</p>
-        <p class="price-item">49 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0046">
-        <a href="#"><img class='card-image' src="image/card/acoustic/floor/dynaudio_emit_m30_new_walnut.png" alt="Dynaudio Emit M30 New Walnut"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Dynaudio Emit M30 New Walnut</a></p>
-        </div>
-        <p class="name-category-card">Напольная акустика</p>
-        <p class="price-item">161 000 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
+  </section>
+  <main>
+    <div class="container">
+      <h2><a id="floor-acoustic">Напольная акустика</a></h2>
+      <div class="item-card-wrapper">
+        <article class="card" data-id="0041">
+          <a href="#"><img class='card-image' src="image/card/acoustic/floor/dali_spektor_6_1.png"
+              alt="Dali Spektor 6 Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Dali Spektor 6 Black</a></p>
+          </div>
+          <p class="name-category-card">Напольная акустика</p>
+          <p class="price-item">49 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0042">
+          <a href="#"><img class='card-image' src="image/card/acoustic/floor/beoplay.png"
+              alt="Bang & Olufsen BeoPlay A9 4nd Gen White"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Bang & Olufsen BeoPlay A9 4nd Gen White</a></p>
+          </div>
+          <p class="name-category-card">Напольная акустика</p>
+          <p class="price-item">399 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0043">
+          <a href="#"><img class='card-image' src="image/card/acoustic/floor/B_W_702_S3_Gloss_Black_1.png"
+              alt="Bowers & Wilkins 703 S3 Gloss Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Bowers & Wilkins 703 S3 Gloss Black</a></p>
+          </div>
+          <p class="name-category-card">Напольная акустика</p>
+          <p class="price-item">534 000 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0044">
+          <a href="#"><img class='card-image' src="image/card/acoustic/floor/focal_chora_826_931912828_1.png"
+              alt="Focal Chora 826 Dark Wood"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Focal Chora 826 Dark Wood</a></p>
+          </div>
+          <p class="name-category-card">Напольная акустика</p>
+          <p class="price-item">129 900 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0045">
+          <a href="#"><img class='card-image' src="image/card/acoustic/floor/yamaha_ns_777_1.png"
+              alt="Yamaha NS-777"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Yamaha NS-777</a></p>
+          </div>
+          <p class="name-category-card">Напольная акустика</p>
+          <p class="price-item">49 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0046">
+          <a href="#"><img class='card-image' src="image/card/acoustic/floor/dynaudio_emit_m30_new_walnut.png"
+              alt="Dynaudio Emit M30 New Walnut"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Dynaudio Emit M30 New Walnut</a></p>
+          </div>
+          <p class="name-category-card">Напольная акустика</p>
+          <p class="price-item">161 000 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+      </div>
+      <h2><a id="bookshelf-acoustic">Полочная акустика</a></h2>
+      <div class="item-card-wrapper">
+        <article class="card" data-id="0047">
+          <a href="#"><img class='card-image' src="image/card/acoustic/bookshelf/dali_spektor_2_b_0.png"
+              alt="Dali Spektor 2 Black Ash"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Dali Spektor 2 Black Ash</a></p>
+          </div>
+          <p class="name-category-card">Полочная акустика</p>
+          <p class="price-item">22 290 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0048">
+          <a href="#"><img class='card-image' src="image/card/acoustic/bookshelf/focal_chora.png"
+              alt="Focal Chora 806 Dark Wood"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Focal Chora 806 Dark Wood</a></p>
+          </div>
+          <p class="name-category-card">Полочная акустика</p>
+          <p class="price-item">55 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0049">
+          <a href="#"><img class='card-image' src="image/card/acoustic/bookshelf/dynaudio_emit_m10_new_satin_black.png"
+              alt="Dynaudio Emit M10 New Satin Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Dynaudio Emit M10 New Satin Black</a></p>
+          </div>
+          <p class="name-category-card">Полочная акустика</p>
+          <p class="price-item">77 490 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0050">
+          <a href="#"><img class='card-image' src="image/card/acoustic/bookshelf/jbl_4309_walnut.png"
+              alt="JBL 4309 Walnut"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">JBL 4309 Walnut</a></p>
+          </div>
+          <p class="name-category-card">Полочная акустика</p>
+          <p class="price-item">199 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0051">
+          <a href="#"><img class='card-image' src="image/card/acoustic/bookshelf/jbl_l82_classic_black.png"
+              alt="JBL L82 Classic Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">JBL L82 Classic Black</a></p>
+          </div>
+          <p class="name-category-card">Полочная акустика</p>
+          <p class="price-item">229 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0052">
+          <a href="#"><img class='card-image' src="image/card/acoustic/bookshelf/606_s2_10.png"
+              alt="Bowers & Wilkins 606 S2 Anniversary Edition Oak"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Bowers & Wilkins 606 S2 Anniversary Edition Oak</a></p>
+          </div>
+          <p class="name-category-card">Полочная акустика</p>
+          <p class="price-item">79 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0053">
+          <a href="#"><img class='card-image' src="image/card/acoustic/bookshelf/m_1s1_1.png"
+              alt="Bowers & Wilkins M-1 New Matte Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Bowers & Wilkins M-1 New Matte Black</a></p>
+          </div>
+          <p class="name-category-card">Полочная акустика</p>
+          <p class="price-item">30 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+      </div>
+      <h2><a id="subwoofer-acoustic">Сабвуферы</a></h2>
+      <div class="item-card-wrapper">
+        <article class="card" data-id="0054">
+          <a href="#"><img class='card-image' src="image/card/acoustic/subwoofer/Bowers_&_Wilkins_Formation_Bass.png"
+              alt="Bowers & Wilkins Formation Bass"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Bowers & Wilkins Formation Bass</a></p>
+          </div>
+          <p class="name-category-card">Сабвуфер</p>
+          <p class="price-item">149 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0055">
+          <a href="#"><img class='card-image'
+              src="image/card/acoustic/subwoofer/Bowers_&_Wilkins_ASW608_Matte_Black.png"
+              alt="Bowers & Wilkins ASW608 Matte Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Bowers & Wilkins ASW608 Matte Black</a></p>
+          </div>
+          <p class="name-category-card">Сабвуфер</p>
+          <p class="price-item">68 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0056">
+          <a href="#"><img class='card-image' src="image/card/acoustic/subwoofer/Magnat_Alpha_RS_8_Mocco.png"
+              alt="Magnat Alpha RS 8 Mocco"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Magnat Alpha RS 8 Mocco</a></p>
+          </div>
+          <p class="name-category-card">Сабвуфер</p>
+          <p class="price-item">45 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0057">
+          <a href="#"><img class='card-image' src="image/card/acoustic/subwoofer/Focal_Sub_1000_F_black.png"
+              alt="Focal Sub 1000 F black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Focal Sub 1000 F black</a></p>
+          </div>
+          <p class="name-category-card">Сабвуфер</p>
+          <p class="price-item">149 900 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0058">
+          <a href="#"><img class='card-image' src="image/card/acoustic/subwoofer/Bose_Bass_Module_700_White.png"
+              alt="Bose Bass Module 700 White"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Bose Bass Module 700 White</a></p>
+          </div>
+          <p class="name-category-card">Сабвуфер</p>
+          <p class="price-item">93 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0059">
+          <a href="#"><img class='card-image' src="image/card/acoustic/subwoofer/Denon_HEOS_Subwoofer.png"
+              alt="Denon HEOS Subwoofer"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Denon HEOS Subwoofer</a></p>
+          </div>
+          <p class="name-category-card">Сабвуфер</p>
+          <p class="price-item">49 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+      </div>
+      <h2><a id="portable-acoustic">Беспроводная акустика</a></h2>
+      <div class="item-card-wrapper">
+        <article class="card" data-id="0060">
+          <a href="#"><img class='card-image' src="image/card/acoustic/portable/bowers_wilkins_zeppelin_pearl_grey.png"
+              alt="Bowers & Wilkins Zeppelin Pearl Grey"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Bowers & Wilkins Zeppelin Pearl Grey</a></p>
+          </div>
+          <p class="name-category-card">Портативная акустика</p>
+          <p class="price-item">99 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0061">
+          <a href="#"><img class='card-image' src="image/card/acoustic/portable/Bowers_&_Wilkins_Formation_Flex.png"
+              alt="Bowers & Wilkins Formation Flex"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Bowers & Wilkins Formation Flex</a></p>
+          </div>
+          <p class="name-category-card">Портативная акустика</p>
+          <p class="price-item">63 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0062">
+          <a href="#"><img class='card-image'
+              src="image/card/acoustic/portable/Bang_&_Olufsen_Beosound_Balance_Black_Oak.png"
+              alt="Bang & Olufsen Beosound Balance Black Oak"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Bang & Olufsen Beosound Balance Black Oak</a></p>
+          </div>
+          <p class="name-category-card">Портативная акустика</p>
+          <p class="price-item">299 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0063">
+          <a href="#"><img class='card-image' src="image/card/acoustic/portable/yamaha_musiccast_50_black.png"
+              alt="Yamaha MusicCast 50 Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Yamaha MusicCast 50 Black</a></p>
+          </div>
+          <p class="name-category-card">Портативная акустика</p>
+          <p class="price-item">49 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0064">
+          <a href="#"><img class='card-image' src="image/card/acoustic/portable/marshall_woburn_iii_black.png"
+              alt="Marshall Woburn III Black7"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Marshall Woburn III Black</a></p>
+          </div>
+          <p class="name-category-card">Портативная акустика</p>
+          <p class="price-item">79 990  &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0065">
+          <a href="#"><img class='card-image' src="image/card/acoustic/portable/Marshall_Kilburn_II_Black.png"
+              alt="Marshall Kilburn II Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Marshall Kilburn II Black</a></p>
+          </div>
+          <p class="name-category-card">Портативная акустика</p>
+          <p class="price-item">34 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0066">
+          <a href="#"><img class='card-image' src="image/card/acoustic/portable/Harman:Kardon_Citation_Tower_Grey.png"
+              alt="Harman/Kardon Citation Tower Grey"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Harman/Kardon Citation Tower Grey</a></p>
+          </div>
+          <p class="name-category-card">Портативная акустика</p>
+          <p class="price-item">149 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+      </div>
     </div>
-    <h2><a id="bookshelf-acoustic">Полочная акустика</a></h2>
-    <div class="item-card-wrapper">
-      <article class="card" data-id="0047">
-        <a href="#"><img class='card-image' src="image/card/acoustic/bookshelf/dali_spektor_2_b_0.png" alt="Dali Spektor 2 Black Ash"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Dali Spektor 2 Black Ash</a></p>
-        </div>
-        <p class="name-category-card">Полочная акустика</p>
-        <p class="price-item">22 290 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0048">
-        <a href="#"><img class='card-image' src="image/card/acoustic/bookshelf/focal_chora.png" alt="Focal Chora 806 Dark Wood"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Focal Chora 806 Dark Wood</a></p>
-        </div>
-        <p class="name-category-card">Полочная акустика</p>
-        <p class="price-item">55 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0049">
-        <a href="#"><img class='card-image' src="image/card/acoustic/bookshelf/dynaudio_emit_m10_new_satin_black.png" alt="Dynaudio Emit M10 New Satin Black"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Dynaudio Emit M10 New Satin Black</a></p>
-        </div>
-        <p class="name-category-card">Полочная акустика</p>
-        <p class="price-item">77 490 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article> 
-      <article class="card" data-id="0050">
-        <a href="#"><img class='card-image' src="image/card/acoustic/bookshelf/jbl_4309_walnut.png" alt="JBL 4309 Walnut"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">JBL 4309 Walnut</a></p>
-        </div>
-        <p class="name-category-card">Полочная акустика</p>
-        <p class="price-item">199 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0051">
-        <a href="#"><img class='card-image' src="image/card/acoustic/bookshelf/jbl_l82_classic_black.png" alt="JBL L82 Classic Black"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">JBL L82 Classic Black</a></p>
-        </div>
-        <p class="name-category-card">Полочная акустика</p>
-        <p class="price-item">229 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0052">
-        <a href="#"><img class='card-image' src="image/card/acoustic/bookshelf/606_s2_10.png" alt="Bowers & Wilkins 606 S2 Anniversary Edition Oak"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Bowers & Wilkins 606 S2 Anniversary Edition Oak</a></p>
-        </div>
-        <p class="name-category-card">Полочная акустика</p>
-        <p class="price-item">79 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0053">
-        <a href="#"><img class='card-image' src="image/card/acoustic/bookshelf/m_1s1_1.png" alt="Bowers & Wilkins M-1 New Matte Black"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Bowers & Wilkins M-1 New Matte Black</a></p>
-        </div>
-        <p class="name-category-card">Полочная акустика</p>
-        <p class="price-item">30 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-    </div>
-    <h2><a id="subwoofer-acoustic">Сабвуферы</a></h2>
-    <div class="item-card-wrapper">
-      <article class="card" data-id="0054">
-        <a href="#"><img class='card-image' src="image/card/acoustic/subwoofer/Bowers_&_Wilkins_Formation_Bass.png" alt="Bowers & Wilkins Formation Bass"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Bowers & Wilkins Formation Bass</a></p>
-        </div>
-        <p class="name-category-card">Сабвуфер</p>
-        <p class="price-item">149 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0055">
-        <a href="#"><img class='card-image' src="image/card/acoustic/subwoofer/Bowers_&_Wilkins_ASW608_Matte_Black.png" alt="Bowers & Wilkins ASW608 Matte Black"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Bowers & Wilkins ASW608 Matte Black</a></p>
-        </div>
-        <p class="name-category-card">Сабвуфер</p>
-        <p class="price-item">68 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0056">
-        <a href="#"><img class='card-image' src="image/card/acoustic/subwoofer/Magnat_Alpha_RS_8_Mocco.png" alt="Magnat Alpha RS 8 Mocco"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Magnat Alpha RS 8 Mocco</a></p>
-        </div>
-        <p class="name-category-card">Сабвуфер</p>
-        <p class="price-item">45 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article> 
-      <article class="card" data-id="0057">
-        <a href="#"><img class='card-image' src="image/card/acoustic/subwoofer/Focal_Sub_1000_F_black.png" alt="Focal Sub 1000 F black"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Focal Sub 1000 F black</a></p>
-        </div>
-        <p class="name-category-card">Сабвуфер</p>
-        <p class="price-item">149 900 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0058">
-        <a href="#"><img class='card-image' src="image/card/acoustic/subwoofer/Bose_Bass_Module_700_White.png" alt="Bose Bass Module 700 White"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Bose Bass Module 700 White</a></p>
-        </div>
-        <p class="name-category-card">Сабвуфер</p>
-        <p class="price-item">93 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0059">
-        <a href="#"><img class='card-image' src="image/card/acoustic/subwoofer/Denon_HEOS_Subwoofer.png" alt="Denon HEOS Subwoofer"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Denon HEOS Subwoofer</a></p>
-        </div>
-        <p class="name-category-card">Сабвуфер</p>
-        <p class="price-item">49 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-    </div>
-    <h2><a id="portable-acoustic">Беспроводная акустика</a></h2>
-    <div class="item-card-wrapper">
-      <article class="card" data-id="0060">
-        <a href="#"><img class='card-image' src="image/card/acoustic/portable/bowers_wilkins_zeppelin_pearl_grey.png" alt="Bowers & Wilkins Zeppelin Pearl Grey"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Bowers & Wilkins Zeppelin Pearl Grey</a></p>
-        </div>
-        <p class="name-category-card">Портативная акустика</p>
-        <p class="price-item">99 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0061">
-        <a href="#"><img class='card-image' src="image/card/acoustic/portable/Bowers_&_Wilkins_Formation_Flex.png" alt="Bowers & Wilkins Formation Flex"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Bowers & Wilkins Formation Flex</a></p>
-        </div>
-        <p class="name-category-card">Портативная акустика</p>
-        <p class="price-item">63 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0062">
-        <a href="#"><img class='card-image' src="image/card/acoustic/portable/Bang_&_Olufsen_Beosound_Balance_Black_Oak.png" alt="Bang & Olufsen Beosound Balance Black Oak"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Bang & Olufsen Beosound Balance Black Oak</a></p>
-        </div>
-        <p class="name-category-card">Портативная акустика</p>
-        <p class="price-item">299 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article> 
-      <article class="card" data-id="0063">
-        <a href="#"><img class='card-image' src="image/card/acoustic/portable/yamaha_musiccast_50_black.png" alt="Yamaha MusicCast 50 Black"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Yamaha MusicCast 50 Black</a></p>
-        </div>
-        <p class="name-category-card">Портативная акустика</p>
-        <p class="price-item">49 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0064">
-        <a href="#"><img class='card-image' src="image/card/acoustic/portable/marshall_woburn_iii_black.png" alt="Marshall Woburn III Black7"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Marshall Woburn III Black</a></p>
-        </div>
-        <p class="name-category-card">Портативная акустика</p>
-        <p class="price-item">79 990  &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0065">
-        <a href="#"><img class='card-image' src="image/card/acoustic/portable/Marshall_Kilburn_II_Black.png" alt="Marshall Kilburn II Black"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Marshall Kilburn II Black</a></p>
-        </div>
-        <p class="name-category-card">Портативная акустика</p>
-        <p class="price-item">34 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-      <article class="card" data-id="0066">
-        <a href="#"><img class='card-image' src="image/card/acoustic/portable/Harman:Kardon_Citation_Tower_Grey.png" alt="Harman/Kardon Citation Tower Grey"></a>
-        <div class="name-item-wrapper">
-          <p class="name-item"><a href="#" class="item-name">Harman/Kardon Citation Tower Grey</a></p>
-        </div>
-        <p class="name-category-card">Портативная акустика</p>
-        <p class="price-item">149 990 &#8381</p>
-        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-        <button data-basket>в корзину</button>
-      </article>
-    </div>
-  </div>
-</main>
-<footer>
+  </main>
+  <footer>
     <div class="container">
       <div class="footer-wrapper">
         <div class="info">
@@ -418,23 +451,22 @@
             <li><a href="#">Политика конфиденциальности</a></li>
           </ul>
         </div>
-          <div class="support">
-            <ul>
-              <li class="footer-title">Поддержка</li>
-              <li><a href="#">Помощь покупателю</a></li>
-              <li><a href="#">Доставка и оплата</a></li>
-              <li><a href="#">Возврат</a></li>
-            </ul>
-          </div>
-          <div class="social-media">
-            <ul>
-              <li class="footer-title">Социальные сети</li>
-              <li><a href="#"><img src="image/icon/vk.png" alt="vk">Вконтакте</a></li>
-              <li><a href="#"><img src="image/icon/telegram.png" alt="telegram">Telegram</a></li>
-            </ul>
-          </div>
+        <div class="support">
+          <ul>
+            <li class="footer-title">Поддержка</li>
+            <li><a href="#">Помощь покупателю</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Возврат</a></li>
+          </ul>
+        </div>
+        <div class="social-media">
+          <ul>
+            <li class="footer-title">Социальные сети</li>
+            <li><a href="#"><img src="image/icon/vk.png" alt="vk">Вконтакте</a></li>
+            <li><a href="#"><img src="image/icon/telegram.png" alt="telegram">Telegram</a></li>
+          </ul>
+        </div>
       </div>
-      
     </div>
   </footer>
   <div class="btn-up"><img src="image/icon/up.png" alt="up"></div>
@@ -453,4 +485,5 @@
   <script src="JS/showFavoritesCounter.js"></script>
   <script src="JS/showBasketCounter.js"></script>
 </body>
+
 </html>

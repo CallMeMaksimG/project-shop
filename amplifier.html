@@ -1,387 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Усилители</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
-    <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Усилители</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
+  <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
-  <div class="shadow" style="position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0.8; z-index: 1; display: none;"></div>
+  <div class="shadow"
+    style="position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0.8; z-index: 1; display: none;">
+  </div>
   <header class="navbar">
     <div class="container">
-        <div class="nav-wrapper">
-          <button class="burger-btn" id="burger">
-            <span></span><span></span><span></span>
-          </button>
-            <a href="index.html">
-                <h1 class="title">AUDIO EDEN</h1>
-            </a>
-              <ul class="menu">
-                <li class="search-burger"><button class="search-brgr" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
-                <li class="account-burger"><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
-                  <li><button class="accordion-btn"></button><a href="vinylPlayers.html" class="category">Виниловые проигрыватели</a></li>
-                  <li><button class="accordion-btn"></button><a href="amplifier.html" class="category">Усилители</a></li>
-                  <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="acoustics.html" class="category">Акустика</a>
-                  <ul class="subcategory">
-                      <li><a href="acoustics.html#floor-acoustic">Напольная акустика</a></li>
-                      <li><a href="acoustics.html#bookshelf-acoustic">Полочная акустика</a></li>
-                      <li><a href="acoustics.html#subwoofer-acoustic">Сабвуферы</a></li>
-                      <li><a href="acoustics.html#portable-acoustic">Беспроводная акустика</a></li>
-                  </ul>
-                  </li>
-                  <li class="category-wrapper"><button  class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="vinylRecords.html" class="category">Виниловые пластинки</a>
-                  <ul class="subcategory">
-                    <li><a href="vinylRecords.html#jazz">Джаз</a></li>
-                    <li><a href="vinylRecords.html#classical">Классическая</a></li>
-                    <li><a href="vinylRecords.html#pop">Популярная музыка</a></li>
-                    <li><a href="vinylRecords.html#reggae">Регги</a></li>
-                    <li><a href="vinylRecords.html#rock">Рок</a></li>
-                    <li><a href="vinylRecords.html#hip-hop">Хип-хоп</a></li>
-                    <li><a href="vinylRecords.html#electronic">Электронная</a></li>
-                  </ul>
-                  </li>
-                  <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="accessories.html" class="category">Аксессуары</a>
-                  <ul class="subcategory">
-                    <li><a href="accessories.html#cable">Акустические кабели</a></li>
-                    <li><a href="accessories.html#pickup">Головки звукоснимателя</a></li>
-                    <li><a href="accessories.html#needle">Иглы</a></li>
-                    <li><a href="accessories.html#headshell">Хедшеллы</a></li>
-                  </ul>
-                  </li>
-                  <li><button class="search" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
-              </ul>
-                  <ul class="menu-fav-basket">
-                    <li><a href="favorites.html"><img class="nav-icon like" src="image/icon/like.png" alt="like"></a><div class="counter-favorites">0</div></li>
-                    <li>
-                      <div class="basket-all-wrapper">
-                        <img id="basket" class="nav-icon" src="image/icon/basket.png" alt="basket"><div class="counter-total-basket">0</div>
-                    
-                                          <div class="drop-down-basket">
-                        <div class="drop-down-basket-title">
-                          <h3>Корзина</h3>
-                        </div>
-                        <div class="empty-basket">
-                          <img src="image/icon/shopping-bag.jpg" alt="basket">
-                          <p>В корзине пусто</p>
-                        </div>
-                    
-                        <div class="drop-down-basket-item-wrapper">
-                    
-                        </div>
-                        <div class="close-basket"><img src="image/icon/close.png" alt="close"></div>
-                        <div class="footer-drop-down-basket none">
-                          <div class="sum">
-                            <p>Сумма заказа:</p>
-                            <p ><span class="total-price">0</span> <span class="currency">&#8381</span></p>
-                          </div>
-                    
-                          <div class="button-wrapper">
-                            <button id="checkout">Оформить заказ</button>
-                          </div>
-                        </div>
-                    
-                    
-                                          </div>
-                      </div>
-                      <div class="drop-down-basket">
-                          <div class="drop-down-basket-title">
-                            <h3>Корзина</h3>
-                          </div>
-                          <div class="drop-down-basket-item-wrapper">
-                          </div>
-                          <div class="button-wrapper">
-                            <button id="checkout">Оформить заказ</button>
-                          </div>
-                    
-                      </div>
-                    </li>
-                  </ul>
-                  <ul class="account-icon">
+      <div class="nav-wrapper">
+        <button class="burger-btn" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="index.html">
+          <h1 class="title">AUDIO EDEN</h1>
+        </a>
+        <ul class="menu">
+          <li class="search-burger"><button class="search-brgr" value="Click" onmousedown="openSearchBar()"><img
+                class="nav-icon" src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+          <li class="account-burger"><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account"
+                src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+          <li><button class="accordion-btn"></button><a href="vinylPlayers.html" class="category">Виниловые
+              проигрыватели</a></li>
+          <li><button class="accordion-btn"></button><a href="amplifier.html" class="category">Усилители</a></li>
+          <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png"
+                alt=""></button><a href="acoustics.html" class="category">Акустика</a>
+            <ul class="subcategory">
+              <li><a href="acoustics.html#floor-acoustic">Напольная акустика</a></li>
+              <li><a href="acoustics.html#bookshelf-acoustic">Полочная акустика</a></li>
+              <li><a href="acoustics.html#subwoofer-acoustic">Сабвуферы</a></li>
+              <li><a href="acoustics.html#portable-acoustic">Беспроводная акустика</a></li>
+            </ul>
+          </li>
+          <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png"
+                alt=""></button><a href="vinylRecords.html" class="category">Виниловые пластинки</a>
+            <ul class="subcategory">
+              <li><a href="vinylRecords.html#jazz">Джаз</a></li>
+              <li><a href="vinylRecords.html#classical">Классическая</a></li>
+              <li><a href="vinylRecords.html#pop">Популярная музыка</a></li>
+              <li><a href="vinylRecords.html#reggae">Регги</a></li>
+              <li><a href="vinylRecords.html#rock">Рок</a></li>
+              <li><a href="vinylRecords.html#hip-hop">Хип-хоп</a></li>
+              <li><a href="vinylRecords.html#electronic">Электронная</a></li>
+            </ul>
+          </li>
+          <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png"
+                alt=""></button><a href="accessories.html" class="category">Аксессуары</a>
+            <ul class="subcategory">
+              <li><a href="accessories.html#cable">Акустические кабели</a></li>
+              <li><a href="accessories.html#pickup">Головки звукоснимателя</a></li>
+              <li><a href="accessories.html#needle">Иглы</a></li>
+              <li><a href="accessories.html#headshell">Хедшеллы</a></li>
+            </ul>
+          </li>
+          <li><button class="search" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"
+                src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+        </ul>
+        <ul class="menu-fav-basket">
+          <li><a href="favorites.html"><img class="nav-icon like" src="image/icon/like.png" alt="like"></a>
+            <div class="counter-favorites">0</div>
+          </li>
+          <li>
+            <div class="basket-all-wrapper">
+              <img id="basket" class="nav-icon" src="image/icon/basket.png" alt="basket">
+              <div class="counter-total-basket">0</div>
 
-                  
-                  <li><a href="enter.html" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
-              </ul>
-
-
-              
-                    <div id="search_bar">
-                
-                <form>
-                  <input name="search" type="search" placeholder="Поиск">
-                  <button type="submit"><img src="image/icon/search.png" alt=""></button>
-                  <button type="button" id="close" value="Click" onmousedown="closeSearchBar()"> Закрыть </button>
-                </form>
-              
-            </div>
-</header>
-        
-        <section class="nav-catalog">
-            <div class="container">
-                <div class="nav-catalog-wrapper">
-                    <ul>
-                        <li><a href="index.html">Главная</a></li> <span>/</span>
-                        <li>Усилители</li>
-                    </ul>
+              <div class="drop-down-basket">
+                <div class="drop-down-basket-title">
+                  <h3>Корзина</h3>
                 </div>
-            </div>
-        
-        </section>
-
-        <main>
-          <div class="container">
-            <div class="item-card-wrapper">
-              <article class="card" data-id="0021">
-                <a href="#"><img class='card-image' src="image/card/amplifier/pioneer_a10ae_b_1.png" alt="Pioneer A-10AE Black"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Pioneer A-10AE Black</a></p>
+                <div class="empty-basket">
+                  <img src="image/icon/shopping-bag.jpg" alt="basket">
+                  <p>В корзине пусто</p>
                 </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">41 990 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-              <article class="card" data-id="0022">
-                <a href="#"><img class='card-image' src="image/card/amplifier/audiolab_omnia_1.png" alt="Audiolab Omnia Black"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Audiolab Omnia Black</a></p>
+                <div class="drop-down-basket-item-wrapper">
                 </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">119 990 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-              <article class="card" data-id="0023">
-                <a href="#"><img class='card-image' src="image/card/amplifier/denon_pma900ne_silver.png" alt="Denon PMA-900NE Silver"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Denon PMA-900NE Silver</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">109 900 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article> 
-              <article class="card" data-id="0024"> 
-                <a href="#"><img class='card-image' src="image/card/amplifier/marantz_pm7000n_1b.png" alt="Marantz PM7000N Black"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Marantz PM7000N Black</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">159 990 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-              <article class="card" data-id="0025">
-                <a href="#"><img class='card-image' src="image/card/amplifier/technics_SU_G700_1b.png" alt="Technics SU-G700 Black"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Technics SU-G700 Black</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">279 000 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-              <article class="card" data-id="0026">
-                <a href="#"><img class='card-image' src="image/card/amplifier/yamaha_a_s201_1.png" alt="Yamaha A-S201 Black"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Yamaha A-S201 Black</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">39 900 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-              <article class="card" data-id="0027">
-                <a href="#"><img class='card-image' src="image/card/amplifier/TA_ZH1ES_FT_Large.png" alt="Sony TA-ZH1ES"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Sony TA-ZH1ES</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">169 990 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article> 
-              <article class="card" data-id="0028">
-                <a href="#"><img class='card-image' src="image/card/amplifier/800x800.png" alt="Denon RCD-M41 Black"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Denon RCD-M41 Black</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">44 900 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-              <article class="card" data-id="0029">
-                <a href="#"><img class='card-image' src="image/card/amplifier/denon_pma_1600ne.png" alt="Denon PMA-1600NE Black"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Denon PMA-1600NE Black</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">185 000 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-              <article class="card" data-id="0030">
-                <a href="#"><img class='card-image' src="image/card/amplifier/yamaha_as501_1s.png" alt="Yamaha A-S501 Silver"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Yamaha A-S501 Silver</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">79 990 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-              <article class="card" data-id="0031">
-                <a href="#"><img class='card-image' src="image/card/amplifier/marantz_amp_10_black.png" alt="Marantz AMP 10 Black"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Marantz AMP 10 Black</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">649 990 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article> 
-              <article class="card" data-id="0032">
-                <a href="#"><img class='card-image' src="image/card/amplifier/denon_pma-60.png" alt="Denon PMA-60 silver"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Denon PMA-60 silver</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">69 990 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-              <article class="card" data-id="0033">
-                <a href="#"><img class='card-image' src="image/card/amplifier/denon_dra100_0.png" alt="Denon DRA-100 Silver"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Denon DRA-100 Silver</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">99 990 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-              <article class="card" data-id="0034">
-                <a href="#"><img class='card-image' src="image/card/amplifier/marantz_pm10s1_1b.png" alt="Marantz PM10S1 Black"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Marantz PM10S1 Black</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">706 000 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-              <article class="card" data-id="0035">
-                <a href="#"><img class='card-image' src="image/card/amplifier/magnat_mr_750_black.png" alt="Magnat MR 750 Black"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Magnat MR 750 Black</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">79 990 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article> 
-              <article class="card" data-id="0036">
-                <a href="#"><img class='card-image' src="image/card/amplifier/leak_stereo_130_walnut.png" alt="Leak Stereo 130 Walnut"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Leak Stereo 130 Walnut</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">96 090 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-              <article class="card" data-id="0037">
-                <a href="#"><img class='card-image' src="image/card/amplifier/pro_ject.png" alt="Pro-Ject MAIA DS Silver"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Pro-Ject MAIA DS Silver</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">64 000 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-              <article class="card" data-id="0038">
-                <a href="#"><img class='card-image' src="image/card/amplifier/tonewinner_ad5100pa_1.png" alt="ToneWinner AD-5100PA Plus"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">ToneWinner AD-5100PA Plus</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">49 990 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-              <article class="card" data-id="0039">
-                <a href="#"><img class='card-image' src="image/card/amplifier/851a_silver.png" alt="Cambridge Audio Azur 851A Silver"></a>
-                  <div class="name-item-wrapper">
-                    <p class="name-item"><a href="#" class="item-name">Cambridge Audio Azur 851A Silver</a></p>
+                <div class="close-basket"><img src="image/icon/close.png" alt="close"></div>
+                <div class="footer-drop-down-basket none">
+                  <div class="sum">
+                    <p>Сумма заказа:</p>
+                    <p><span class="total-price">0</span> <span class="currency">&#8381</span></p>
                   </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">269 400 &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article> 
-              <article class="card" data-id="0040">
-                <a href="#"><img class='card-image' src="image/card/amplifier/Pro_Ject-MaiA-S2-Chrome_1.png" alt="Pro-Ject MaiA S2 Chrome"></a>
-                <div class="name-item-wrapper">
-                  <p class="name-item"><a href="#" class="item-name">Pro-Ject MaiA S2 Chrome</a></p>
-                </div>
-                <p class="name-category-card">Усилитель</p>
-                <p class="price-item">110 000  &#8381</p>
-                <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
-                <button data-basket>в корзину</button>
-              </article>
-         
-            </div>
-          </div>
-        </main>
-        <footer>
-            <div class="container">
-              <div class="footer-wrapper">
-                <div class="info">
-                  <ul>
-                    <li class="footer-title">Информация</li>
-                    <li><a href="blog.html">Блог</a></li>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Контакты</a></li>
-                    <li><a href="#">Политика конфиденциальности</a></li>
-                  </ul>
-                </div>
-                  <div class="support">
-                    <ul>
-                      <li class="footer-title">Поддержка</li>
-                      <li><a href="#">Помощь покупателю</a></li>
-                      <li><a href="#">Доставка и оплата</a></li>
-                      <li><a href="#">Возврат</a></li>
-                    </ul>
+                  <div class="button-wrapper">
+                    <button id="checkout">Оформить заказ</button>
                   </div>
-                  <div class="social-media">
-                    <ul>
-                      <li class="footer-title">Социальные сети</li>
-                      <li><a href="#"><img src="image/icon/vk.png" alt="vk">Вконтакте</a></li>
-                      <li><a href="#"><img src="image/icon/telegram.png" alt="telegram">Telegram</a></li>
-                    </ul>
-                  </div>
+                </div>
               </div>
-              
             </div>
-          </footer>
-          <div class="btn-up"><img src="image/icon/up.png" alt="up"></div>
-          <script src="JS/burgerMenu.js"></script>
-          <script src="JS/totalBasketPrice.js"></script>
-          <script src="JS/jquery-3.6.4.min.js"></script>
-          <script src="JS/dropdownMenu.js"></script>
-          <script src="JS/showFavoriesButton.js"></script>
-          <script src="JS/favorites.js"></script>
-          <script src="JS/searchBar.js"></script>
-          <script src="JS/openCart.js"></script>
-          <script src="JS/redirectCheckout.js"></script>
-          <script src="JS/toggleBasketStatus.js"></script>
-          <script src="JS/basket01.js"></script>
-          <script src="JS/goTopBtn.js"></script>
-          <script src="JS/showFavoritesCounter.js"></script>
-          <script src="JS/showBasketCounter.js"></script>
+            <div class="drop-down-basket">
+              <div class="drop-down-basket-title">
+                <h3>Корзина</h3>
+              </div>
+              <div class="drop-down-basket-item-wrapper">
+              </div>
+              <div class="button-wrapper">
+                <button id="checkout">Оформить заказ</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <ul class="account-icon">
+          <li><a href="enter.html" class="account-header-wrapper"><img class="nav-icon account"
+                src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+        </ul>
+        <div id="search_bar">
+          <form>
+            <input name="search" type="search" placeholder="Поиск">
+            <button type="submit"><img src="image/icon/search.png" alt=""></button>
+            <button type="button" id="close" value="Click" onmousedown="closeSearchBar()"> Закрыть </button>
+          </form>
+        </div>
+  </header>
+  <section class="nav-catalog">
+    <div class="container">
+      <div class="nav-catalog-wrapper">
+        <ul>
+          <li><a href="index.html">Главная</a></li> <span>/</span>
+          <li>Усилители</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <main>
+    <div class="container">
+      <div class="item-card-wrapper">
+        <article class="card" data-id="0021">
+          <a href="#"><img class='card-image' src="image/card/amplifier/pioneer_a10ae_b_1.png"
+              alt="Pioneer A-10AE Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Pioneer A-10AE Black</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">41 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0022">
+          <a href="#"><img class='card-image' src="image/card/amplifier/audiolab_omnia_1.png"
+              alt="Audiolab Omnia Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Audiolab Omnia Black</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">119 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0023">
+          <a href="#"><img class='card-image' src="image/card/amplifier/denon_pma900ne_silver.png"
+              alt="Denon PMA-900NE Silver"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Denon PMA-900NE Silver</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">109 900 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0024">
+          <a href="#"><img class='card-image' src="image/card/amplifier/marantz_pm7000n_1b.png"
+              alt="Marantz PM7000N Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Marantz PM7000N Black</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">159 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0025">
+          <a href="#"><img class='card-image' src="image/card/amplifier/technics_SU_G700_1b.png"
+              alt="Technics SU-G700 Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Technics SU-G700 Black</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">279 000 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0026">
+          <a href="#"><img class='card-image' src="image/card/amplifier/yamaha_a_s201_1.png"
+              alt="Yamaha A-S201 Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Yamaha A-S201 Black</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">39 900 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0027">
+          <a href="#"><img class='card-image' src="image/card/amplifier/TA_ZH1ES_FT_Large.png" alt="Sony TA-ZH1ES"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Sony TA-ZH1ES</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">169 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0028">
+          <a href="#"><img class='card-image' src="image/card/amplifier/800x800.png" alt="Denon RCD-M41 Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Denon RCD-M41 Black</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">44 900 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0029">
+          <a href="#"><img class='card-image' src="image/card/amplifier/denon_pma_1600ne.png"
+              alt="Denon PMA-1600NE Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Denon PMA-1600NE Black</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">185 000 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0030">
+          <a href="#"><img class='card-image' src="image/card/amplifier/yamaha_as501_1s.png"
+              alt="Yamaha A-S501 Silver"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Yamaha A-S501 Silver</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">79 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0031">
+          <a href="#"><img class='card-image' src="image/card/amplifier/marantz_amp_10_black.png"
+              alt="Marantz AMP 10 Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Marantz AMP 10 Black</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">649 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0032">
+          <a href="#"><img class='card-image' src="image/card/amplifier/denon_pma-60.png" alt="Denon PMA-60 silver"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Denon PMA-60 silver</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">69 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0033">
+          <a href="#"><img class='card-image' src="image/card/amplifier/denon_dra100_0.png"
+              alt="Denon DRA-100 Silver"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Denon DRA-100 Silver</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">99 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0034">
+          <a href="#"><img class='card-image' src="image/card/amplifier/marantz_pm10s1_1b.png"
+              alt="Marantz PM10S1 Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Marantz PM10S1 Black</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">706 000 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0035">
+          <a href="#"><img class='card-image' src="image/card/amplifier/magnat_mr_750_black.png"
+              alt="Magnat MR 750 Black"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Magnat MR 750 Black</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">79 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0036">
+          <a href="#"><img class='card-image' src="image/card/amplifier/leak_stereo_130_walnut.png"
+              alt="Leak Stereo 130 Walnut"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Leak Stereo 130 Walnut</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">96 090 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0037">
+          <a href="#"><img class='card-image' src="image/card/amplifier/pro_ject.png" alt="Pro-Ject MAIA DS Silver"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Pro-Ject MAIA DS Silver</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">64 000 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0038">
+          <a href="#"><img class='card-image' src="image/card/amplifier/tonewinner_ad5100pa_1.png"
+              alt="ToneWinner AD-5100PA Plus"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">ToneWinner AD-5100PA Plus</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">49 990 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0039">
+          <a href="#"><img class='card-image' src="image/card/amplifier/851a_silver.png"
+              alt="Cambridge Audio Azur 851A Silver"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Cambridge Audio Azur 851A Silver</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">269 400 &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+        <article class="card" data-id="0040">
+          <a href="#"><img class='card-image' src="image/card/amplifier/Pro_Ject-MaiA-S2-Chrome_1.png"
+              alt="Pro-Ject MaiA S2 Chrome"></a>
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Pro-Ject MaiA S2 Chrome</a></p>
+          </div>
+          <p class="name-category-card">Усилитель</p>
+          <p class="price-item">110 000  &#8381</p>
+          <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+          <button data-basket>в корзину</button>
+        </article>
+
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="info">
+          <ul>
+            <li class="footer-title">Информация</li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+        <div class="support">
+          <ul>
+            <li class="footer-title">Поддержка</li>
+            <li><a href="#">Помощь покупателю</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Возврат</a></li>
+          </ul>
+        </div>
+        <div class="social-media">
+          <ul>
+            <li class="footer-title">Социальные сети</li>
+            <li><a href="#"><img src="image/icon/vk.png" alt="vk">Вконтакте</a></li>
+            <li><a href="#"><img src="image/icon/telegram.png" alt="telegram">Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="btn-up"><img src="image/icon/up.png" alt="up"></div>
+  <script src="JS/burgerMenu.js"></script>
+  <script src="JS/totalBasketPrice.js"></script>
+  <script src="JS/jquery-3.6.4.min.js"></script>
+  <script src="JS/dropdownMenu.js"></script>
+  <script src="JS/showFavoriesButton.js"></script>
+  <script src="JS/favorites.js"></script>
+  <script src="JS/searchBar.js"></script>
+  <script src="JS/openCart.js"></script>
+  <script src="JS/redirectCheckout.js"></script>
+  <script src="JS/toggleBasketStatus.js"></script>
+  <script src="JS/basket01.js"></script>
+  <script src="JS/goTopBtn.js"></script>
+  <script src="JS/showFavoritesCounter.js"></script>
+  <script src="JS/showBasketCounter.js"></script>
 </body>
+
 </html>
