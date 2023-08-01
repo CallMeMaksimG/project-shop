@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как изготавливают виниловые пластинки?n</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <div class="shadow" style="position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0.8; z-index: 1; display: none;"></div>
+  <header class="navbar">
+    <div class="container">
+        <div class="nav-wrapper">
+          <button class="burger-btn" id="burger">
+            <span></span><span></span><span></span>
+          </button>
+            <a href="index.html">
+                <h1 class="title">AUDIO EDEN</h1>
+            </a>
+              <ul class="menu">
+                <li class="search-burger"><button class="search-brgr" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+                <li class="account-burger"><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+                  <li><button class="accordion-btn"></button><a href="vinylPlayers.php" class="category">Виниловые проигрыватели</a></li>
+                  <li><button class="accordion-btn"></button><a href="amplifier.php" class="category">Усилители</a></li>
+                  <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="acoustics.php" class="category">Акустика</a>
+                  <ul class="subcategory">
+                      <li><a href="acoustics.php#floor-acoustic">Напольная акустика</a></li>
+                      <li><a href="acoustics.php#bookshelf-acoustic">Полочная акустика</a></li>
+                      <li><a href="acoustics.php#subwoofer-acoustic">Сабвуферы</a></li>
+                      <li><a href="acoustics.php#portable-acoustic">Беспроводная акустика</a></li>
+                  </ul>
+                  </li>
+                  <li class="category-wrapper"><button  class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="vinylRecords.php" class="category">Виниловые пластинки</a>
+                  <ul class="subcategory">
+                    <li><a href="vinylRecords.php#jazz">Джаз</a></li>
+                    <li><a href="vinylRecords.php#classical">Классическая</a></li>
+                    <li><a href="vinylRecords.php#pop">Популярная музыка</a></li>
+                    <li><a href="vinylRecords.php#reggae">Регги</a></li>
+                    <li><a href="vinylRecords.php#rock">Рок</a></li>
+                    <li><a href="vinylRecords.php#hip-hop">Хип-хоп</a></li>
+                    <li><a href="vinylRecords.php#electronic">Электронная</a></li>
+                  </ul>
+                  </li>
+                  <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="accessories.php" class="category">Аксессуары</a>
+                  <ul class="subcategory">
+                    <li><a href="accessories.php#cable">Акустические кабели</a></li>
+                    <li><a href="accessories.php#pickup">Головки звукоснимателя</a></li>
+                    <li><a href="accessories.php#needle">Иглы</a></li>
+                    <li><a href="accessories.php#headshell">Хедшеллы</a></li>
+                  </ul>
+                  </li>
+                  <li><button class="search" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+              </ul>
+                  <ul class="menu-fav-basket">
+                    <li><a href="favorites.html"><img class="nav-icon like" src="image/icon/like.png" alt="like"></a><div class="counter-favorites">0</div></li>
+                    <li>
+                      <div class="basket-all-wrapper">
+                        <img id="basket" class="nav-icon" src="image/icon/basket.png" alt="basket"><div class="counter-total-basket">0</div>
+                    
+                                          <div class="drop-down-basket">
+                        <div class="drop-down-basket-title">
+                          <h3>Корзина</h3>
+                        </div>
+                        <div class="empty-basket">
+                          <img src="image/icon/shopping-bag.jpg" alt="basket">
+                          <p>В корзине пусто</p>
+                        </div>
+                    
+                        <div class="drop-down-basket-item-wrapper">
+                    
+                        </div>
+                        <div class="close-basket"><img src="image/icon/close.png" alt="close"></div>
+                        <div class="footer-drop-down-basket none">
+                          <div class="sum">
+                            <p>Сумма заказа:</p>
+                            <p ><span class="total-price">0</span> <span class="currency">&#8381</span></p>
+                          </div>
+                    
+                          <div class="button-wrapper">
+                            <button id="checkout">Оформить заказ</button>
+                          </div>
+                        </div>
+                    
+                    
+                                          </div>
+                      </div>
+                      <div class="drop-down-basket">
+                          <div class="drop-down-basket-title">
+                            <h3>Корзина</h3>
+                          </div>
+                          <div class="drop-down-basket-item-wrapper">
+                          </div>
+                          <div class="button-wrapper">
+                            <button id="checkout">Оформить заказ</button>
+                          </div>
+                    
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="account-icon">
+
+                  
+                  <li><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+              </ul>
+
+
+              
+                    <div id="search_bar">
+                
+                <form action="search.php" method="post">
+                  <input type="search" name="search" placeholder="Поиск">
+                  <button type="submit"><img src="image/icon/search.png" alt=""></button>
+                  <button type="button" id="close" value="Click" onmousedown="closeSearchBar()"> Закрыть </button>
+                </form>
+              
+            </div>
+</header>
+<section class="nav-catalog">
+    <div class="container">
+        <div class="nav-catalog-wrapper">
+            <ul>
+                <li><a href="index.html">Главная</a></li> <span>/</span>
+                <li><a href="blog.html">Блог</a></li> <span>/</span>
+                <li>Изготовление виниловых пластинок</li>
+            </ul>
+        </div>
+    </div>
+
+</section>
+<main>
+    <article>
+        <div class="container">
+            <div class="article-wrapper">
+                <h1>Как изготавливают виниловые пластинки?</h1>
+                <img class="main-image-article" src="image/article/vinylrecord3.jpg" alt="vinylrecord">
+                <div class="text-article">
+                    <p>Звук с помощью специальной аппаратуры преобразуется в механические колебания резца 
+                        (чаще всего сапфирового), который нарезает на слое материала спиральную звуковую дорожку. 
+                        На заре грамзаписи (по меньшей мере до 1940 года) дорожки нарезались на воскоподобном веществе, 
+                        впоследствии — на слое нитроцеллюлозного лака, нанесённого на алюминиевый диск. В конце 1970-х 
+                        годов фирмой Teldec была разработана технология DMM (англ. Direct Metal Mastering), согласно 
+                        которой дорожки формируются на тончайшем слое аморфной меди, покрывающем идеально ровную стальную 
+                        подложку. Это позволило значительно повысить точность воспроизведения записанного сигнала, что 
+                        привело к заметному улучшению качества звучания фонографических записей. Данная технология применяется 
+                        и по сей день.</p>
+                        <p>С полученного таким образом диска при помощи гальванопластики в несколько последовательных этапов 
+                            получают необходимое количество никелевых копий как с позитивным, так и с негативным (когда канавки 
+                            со звуковой дорожкой выглядят, как выступы над поверхностью диска) отображением механической фонограммы. 
+                            Изготовленные на последнем этапе негативные копии, которые служат основой в процессе прессования виниловых 
+                            пластинок, называют матрицами; все промежуточные никелевые копии принято называть оригиналами.</p>
+                </div>
+                <div class="other-image-article">
+                    <img class="no-margin-left" src="image/article/vinilrecord1.jpg" alt="vinylrecord">
+                    <img class="no-margin-right" src="image/article/vinylrecord2.jpg" alt="vinylrecord">
+                </div>
+                <div class="text-article">
+                    <p>Изготовление оригиналов и матриц осуществляется в гальваническом цехе. Электрохимические процессы ведутся в 
+                        многокамерных гальванических установках с автоматическим ступенчатым регулированием электрического тока и 
+                        времени наращивания никеля.</p>
+                    <p>Детали пресс-форм изготавливаются на станках с ЧПУ и проходят высокотемпературную пайку в вакуум-печах по специальной 
+                        технологии. Сами пресс-формы обеспечивают высокую равномерность температурного поля на формующих поверхностях, малую 
+                        инерционность температурного режима, а значит, и высокую производительность. С помощью одной пресс-формы можно 
+                        изготовить десятки тысяч грампластинок.</p>
+                    </div>
+
+                    <div class="video">
+                      <iframe  src="https://www.youtube.com/embed/r42ZU8TmSVg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="text-article">
+                    <p>Материал для изготовления современной грампластинки — это особая смесь на основе сополимера винилхлорида и винилацетата
+                        с различными добавками, необходимыми для придания пластмассе необходимых механико-температурных свойств. Высокое качество
+                        смешения порошкообразных компонентов достигается использованием двухстадийных смесителей с горячим и холодным смешением.</p>
+                        <p>В пресс-цехе в пресс подаётся разогретая порция винила с уже приклеенными сверху и снизу этикетками, которая под давлением до
+                            200 атм растекается между двумя половинками пресс-формы и после остывания образует готовую грампластинку. Далее производится
+                            обрезка кромок диска, контроль и упаковка.</p>
+                  </div>
+                <img class="main-image-article" src="image/article/vinylrecord4.jpg" alt="vinylrecord">
+                <div class="text-article">
+                    
+                    <p>Первая грампластинка, изготовленная после установки на пресс никелевых матриц, а затем каждая специально отобранная из тиража, 
+                        тщательно проверяются по размерным характеристикам и прослушиваются в специально оборудованных звуковых кабинах. Во избежание 
+                        коробления все отпрессованные грампластинки проходят необходимую температурную выдержку, а перед упаковкой в конверт внешний 
+                        вид каждой грампластинки проверяется дополнительно.</p>
+                    <p>Поливинилхлорид (ПВХ), из которого изготавливают пластинки, «Гринпис» называет наиболее экологически опасным пластиком. 
+                        Предлагается использование биопластика (пластинки из биопластика можно печатать на тех же прессах, что и обычные виниловые). 
+                        Также, использование вместо ПВХ других материалов.</p>
+                </div>
+                <a href="hhttps://ru.wikipedia.org/wiki/Грампластинка" target="_blank">Источник</a>
+            </div>
+        </div>
+    </article>
+</main>
+
+<footer>
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="info">
+          <ul>
+            <li class="footer-title">Информация</li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+          <div class="support">
+            <ul>
+              <li class="footer-title">Поддержка</li>
+              <li><a href="#">Помощь покупателю</a></li>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">Возврат</a></li>
+            </ul>
+          </div>
+          <div class="social-media">
+            <ul>
+              <li class="footer-title">Социальные сети</li>
+              <li><a href="#"><img src="image/icon/vk.png" alt="vk">Вконтакте</a></li>
+              <li><a href="#"><img src="image/icon/telegram.png" alt="telegram">Telegram</a></li>
+            </ul>
+          </div>
+      </div>
+      
+    </div>
+  </footer>
+  <div class="btn-up"><img src="image/icon/up.png" alt="up"></div>
+  <script src="JS/burgerMenu.js"></script>
+  <script src="JS/jquery-3.6.4.min.js"></script>
+  <script src="JS/toggleBasketStatus.js"></script>
+  <script src="JS/dropdownBasketForOtherPages.js"></script>
+  <script src="JS/openCart.js"></script>
+  <script src="JS/redirectCheckout.js"></script>
+  <script src="JS/dropdownMenu.js"></script>
+  <script src="JS/searchBar.js"></script>
+  <script src="JS/favorites.js"></script>
+  <script src="JS/goTopBtn.js"></script>
+
+  <script src="JS/showFavoritesCounter.js"></script>
+  <script src="JS/showBasketCounter.js"></script>
+</body>
+</html>

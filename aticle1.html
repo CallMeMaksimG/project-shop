@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История электропроигрывателей</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
+    <link rel="stylesheet" href="style/style.css">
+    
+</head>
+<body>
+  <div class="shadow" style="position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0.8; z-index: 1; display: none;"></div>
+  <header class="navbar">
+    <div class="container">
+        <div class="nav-wrapper">
+          <button class="burger-btn" id="burger">
+            <span></span><span></span><span></span>
+          </button>
+            <a href="index.html">
+                <h1 class="title">AUDIO EDEN</h1>
+            </a>
+              <ul class="menu">
+                <li class="search-burger"><button class="search-brgr" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+                <li class="account-burger"><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+                  <li><button class="accordion-btn"></button><a href="vinylPlayers.php" class="category">Виниловые проигрыватели</a></li>
+                  <li><button class="accordion-btn"></button><a href="amplifier.php" class="category">Усилители</a></li>
+                  <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="acoustics.php" class="category">Акустика</a>
+                  <ul class="subcategory">
+                      <li><a href="acoustics.php#floor-acoustic">Напольная акустика</a></li>
+                      <li><a href="acoustics.php#bookshelf-acoustic">Полочная акустика</a></li>
+                      <li><a href="acoustics.php#subwoofer-acoustic">Сабвуферы</a></li>
+                      <li><a href="acoustics.php#portable-acoustic">Беспроводная акустика</a></li>
+                  </ul>
+                  </li>
+                  <li class="category-wrapper"><button  class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="vinylRecords.php" class="category">Виниловые пластинки</a>
+                  <ul class="subcategory">
+                    <li><a href="vinylRecords.php#jazz">Джаз</a></li>
+                    <li><a href="vinylRecords.php#classical">Классическая</a></li>
+                    <li><a href="vinylRecords.php#pop">Популярная музыка</a></li>
+                    <li><a href="vinylRecords.php#reggae">Регги</a></li>
+                    <li><a href="vinylRecords.php#rock">Рок</a></li>
+                    <li><a href="vinylRecords.php#hip-hop">Хип-хоп</a></li>
+                    <li><a href="vinylRecords.php#electronic">Электронная</a></li>
+                  </ul>
+                  </li>
+                  <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="accessories.php" class="category">Аксессуары</a>
+                  <ul class="subcategory">
+                    <li><a href="accessories.php#cable">Акустические кабели</a></li>
+                    <li><a href="accessories.php#pickup">Головки звукоснимателя</a></li>
+                    <li><a href="accessories.php#needle">Иглы</a></li>
+                    <li><a href="accessories.php#headshell">Хедшеллы</a></li>
+                  </ul>
+                  </li>
+                  <li><button class="search" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+              </ul>
+                  <ul class="menu-fav-basket">
+                    <li><a href="favorites.html"><img class="nav-icon like" src="image/icon/like.png" alt="like"></a><div class="counter-favorites">0</div></li>
+                    <li>
+                      <div class="basket-all-wrapper">
+                        <img id="basket" class="nav-icon" src="image/icon/basket.png" alt="basket"><div class="counter-total-basket">0</div>
+                    
+                                          <div class="drop-down-basket">
+                        <div class="drop-down-basket-title">
+                          <h3>Корзина</h3>
+                        </div>
+                        <div class="empty-basket">
+                          <img src="image/icon/shopping-bag.jpg" alt="basket">
+                          <p>В корзине пусто</p>
+                        </div>
+                    
+                        <div class="drop-down-basket-item-wrapper">
+                    
+                        </div>
+                        <div class="close-basket"><img src="image/icon/close.png" alt="close"></div>
+                        <div class="footer-drop-down-basket none">
+                          <div class="sum">
+                            <p>Сумма заказа:</p>
+                            <p ><span class="total-price">0</span> <span class="currency">&#8381</span></p>
+                          </div>
+                    
+                          <div class="button-wrapper">
+                            <button id="checkout">Оформить заказ</button>
+                          </div>
+                        </div>
+                    
+                    
+                                          </div>
+                      </div>
+                      <div class="drop-down-basket">
+                          <div class="drop-down-basket-title">
+                            <h3>Корзина</h3>
+                          </div>
+                          <div class="drop-down-basket-item-wrapper">
+                          </div>
+                          <div class="button-wrapper">
+                            <button id="checkout">Оформить заказ</button>
+                          </div>
+                    
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="account-icon">
+
+                  
+                  <li><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+              </ul>
+
+
+              
+                    <div id="search_bar">
+                
+                <form action="search.php" method="post">
+                  <input type="search" name="search" placeholder="Поиск">
+                  <button type="submit"><img src="image/icon/search.png" alt=""></button>
+                  <button type="button" id="close" value="Click" onmousedown="closeSearchBar()"> Закрыть </button>
+                </form>
+              
+            </div>
+</header>
+<section class="nav-catalog">
+    <div class="container">
+        <div class="nav-catalog-wrapper">
+            <ul>
+                <li><a href="index.html">Главная</a></li> <span>/</span>
+                <li><a href="blog.html">Блог</a></li> <span>/</span>
+                <li>История</li>
+            </ul>
+        </div>
+    </div>
+
+</section>
+</section>
+<main>
+<article>
+    <div class="container">
+        <div class="article-wrapper">
+        
+                <h1>История электропроигрывателей</h1>
+            
+            <img class="main-image-article" src="image/article/historymain.jpg" alt="vinylplayer">
+            <div class="text-article">
+                <p>Электропроигрыватели появились в конце 1920-х годов. Ранние электропроигрыватели были рассчитаны на
+                    воспроизведение монофонических записей и оснащались электромагнитными звукоснимателями. В качестве
+                    игл использовались обычные граммофонные; их необходимо было менять после каждого проигрывания записи.</p>
+                <p>По качеству звучания уже первые электропроигрыватели превосходили современные им граммофоны и патефоны
+                    за счёт использования электронных усилителей сигнала. К тому же головки звукоснимателя у
+                    электропроигрывателей были легче, что меньше изнашивало пластинки и продлевало срок их службы.
+                    Основными недостатками электропроигрывателей были необходимость использования внешнего усилителя
+                    и громкоговорителя и, разумеется, потребность в электричестве. В 20-е — 30-е годы это существенно
+                    ограничивало сферу их применения. Также электропроигрыватели были гораздо дороже механических
+                    устройств для воспроизведения грамзаписей.</p>
+            </div>
+
+            <div class="other-image-article">
+                <img class="no-margin-left" src="image/article/history4.jpg" alt="">
+                <img src="image/article/history3.jpg" alt="">
+            </div>
+            <div class="text-article">
+                <p>В СССР первый электропроигрыватель, получивший название ЭППГ-1 (электропроигрыватель пластинок граммофонных),
+                    был выпущен в конце 1935 года на Московском электромашиностроительном заводе. ЭППГ-1 был рассчитан для
+                    проигрывания стандартных патефонных грампластинок на скорости 78 об/мин совместно с любым радиовещательным
+                    приёмником, имеющим вход для внешнего звукоснимателя.</p>
+                <p>В 1940-х годах появились головки звукоснимателей пьезоэлектрического типа, которые были легче и проще по
+                    конструкции. В СССР такие головки начали выпускать в 1950 году. В более современных электропроигрывателях
+                    вновь вернулись к использованию электромагнитных (MM и MC) головок звукоснимателя.</p>
+                <p>Ещё несколько лет спустя, когда появились долгоиграющие пластинки на 33⅓ об/мин, наладили выпуск
+                    электропроигрывателей с двумя скоростями вращения. В ранних моделях переключение осуществлялось
+                    путём перемещения резинового прижимного ролика вверх-вниз вдоль ступенчатого вала электродвигателя.
+                    Для советских ЭПУ второго и третьего классов такая схема использовалась вплоть до окончания их выпуска.</p>
+            </div>
+            <a href="https://ru.wikipedia.org/wiki/Проигрыватель_грампластинок" target="_blank">Источник</a>
+        </div>
+    </div>
+</article>
+</main>   
+
+<footer>
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="info">
+          <ul>
+            <li class="footer-title">Информация</li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+          <div class="support">
+            <ul>
+              <li class="footer-title">Поддержка</li>
+              <li><a href="#">Помощь покупателю</a></li>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">Возврат</a></li>
+            </ul>
+          </div>
+          <div class="social-media">
+            <ul>
+              <li class="footer-title">Социальные сети</li>
+              <li><a href="#"><img src="image/icon/vk.png" alt="vk">Вконтакте</a></li>
+              <li><a href="#"><img src="image/icon/telegram.png" alt="telegram">Telegram</a></li>
+            </ul>
+          </div>
+      </div>
+      
+    </div>
+  </footer>
+  <div class="btn-up"><img src="image/icon/up.png" alt="up"></div>
+  <script src="JS/burgerMenu.js"></script>
+  <script src="JS/jquery-3.6.4.min.js"></script>
+  <script src="JS/toggleBasketStatus.js"></script>
+  <script src="JS/dropdownBasketForOtherPages.js"></script>
+  <script src="JS/openCart.js"></script>
+  <script src="JS/redirectCheckout.js"></script>
+  <script src="JS/dropdownMenu.js"></script>
+  <script src="JS/searchBar.js"></script>
+  <script src="JS/favorites.js"></script>
+  <script src="JS/goTopBtn.js"></script>
+  <script src="JS/showFavoritesCounter.js"></script>
+  <script src="JS/showBasketCounter.js"></script>
+</body>
+</html>

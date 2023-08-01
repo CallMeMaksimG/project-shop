@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виниловые проигрыватели</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <div class="shadow" style="position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0.8; z-index: 1; display: none;"></div>
+  <header class="navbar">
+    <div class="container">
+        <div class="nav-wrapper">
+          <button class="burger-btn" id="burger">
+            <span></span><span></span><span></span>
+          </button>
+            <a href="index.html">
+                <h1 class="title">AUDIO EDEN</h1>
+            </a>
+              <ul class="menu">
+                <li class="search-burger"><button class="search-brgr" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+                <li class="account-burger"><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+                  <li><button class="accordion-btn"></button><a href="vinylPlayers.html" class="category">Виниловые проигрыватели</a></li>
+                  <li><button class="accordion-btn"></button><a href="amplifier.html" class="category">Усилители</a></li>
+                  <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="acoustics.html" class="category">Акустика</a>
+                  <ul class="subcategory">
+                      <li><a href="acoustics.html#floor-acoustic">Напольная акустика</a></li>
+                      <li><a href="acoustics.html#bookshelf-acoustic">Полочная акустика</a></li>
+                      <li><a href="acoustics.html#subwoofer-acoustic">Сабвуферы</a></li>
+                      <li><a href="acoustics.html#portable-acoustic">Беспроводная акустика</a></li>
+                  </ul>
+                  </li>
+                  <li class="category-wrapper"><button  class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="vinylRecords.html" class="category">Виниловые пластинки</a>
+                  <ul class="subcategory">
+                    <li><a href="vinylRecords.html#jazz">Джаз</a></li>
+                    <li><a href="vinylRecords.html#classical">Классическая</a></li>
+                    <li><a href="vinylRecords.html#pop">Популярная музыка</a></li>
+                    <li><a href="vinylRecords.html#reggae">Регги</a></li>
+                    <li><a href="vinylRecords.html#rock">Рок</a></li>
+                    <li><a href="vinylRecords.html#hip-hop">Хип-хоп</a></li>
+                    <li><a href="vinylRecords.html#electronic">Электронная</a></li>
+                  </ul>
+                  </li>
+                  <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="accessories.html" class="category">Аксессуары</a>
+                  <ul class="subcategory">
+                    <li><a href="accessories.html#cable">Акустические кабели</a></li>
+                    <li><a href="accessories.html#pickup">Головки звукоснимателя</a></li>
+                    <li><a href="accessories.html#needle">Иглы</a></li>
+                    <li><a href="accessories.html#headshell">Хедшеллы</a></li>
+                  </ul>
+                  </li>
+                  <li><button class="search" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+              </ul>
+                  <ul class="menu-fav-basket">
+                    <li><a href="favorites.html"><img class="nav-icon like" src="image/icon/like.png" alt="like"></a><div class="counter-favorites">0</div></li>
+                    <li>
+                      <div class="basket-all-wrapper">
+                        <img id="basket" class="nav-icon" src="image/icon/basket.png" alt="basket"><div class="counter-total-basket">0</div>
+                    
+                                          <div class="drop-down-basket">
+                        <div class="drop-down-basket-title">
+                          <h3>Корзина</h3>
+                        </div>
+                        <div class="empty-basket">
+                          <img src="image/icon/shopping-bag.jpg" alt="basket">
+                          <p>В корзине пусто</p>
+                        </div>
+                    
+                        <div class="drop-down-basket-item-wrapper">
+                    
+                        </div>
+                        <div class="close-basket"><img src="image/icon/close.png" alt="close"></div>
+                        <div class="footer-drop-down-basket none">
+                          <div class="sum">
+                            <p>Сумма заказа:</p>
+                            <p ><span class="total-price">0</span> <span class="currency">&#8381</span></p>
+                          </div>
+                    
+                          <div class="button-wrapper">
+                            <button id="checkout">Оформить заказ</button>
+                          </div>
+                        </div>
+                    
+                    
+                                          </div>
+                      </div>
+                      <div class="drop-down-basket">
+                          <div class="drop-down-basket-title">
+                            <h3>Корзина</h3>
+                          </div>
+                          <div class="drop-down-basket-item-wrapper">
+                          </div>
+                          <div class="button-wrapper">
+                            <button id="checkout">Оформить заказ</button>
+                          </div>
+                    
+                      </div>
+                    </li>
+                  </ul>
+                  <ul class="account-icon">
+
+                  
+                  <li><a href="enter.html" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+              </ul>
+
+
+              
+                    <div id="search_bar">
+                
+                <form>
+                  <input name="search" type="search" placeholder="Поиск">
+                  <button type="submit"><img src="image/icon/search.png" alt=""></button>
+                  <button type="button" id="close" value="Click" onmousedown="closeSearchBar()"> Закрыть </button>
+                </form>
+              
+            </div>
+</header>
+<section class="nav-catalog">
+    <div class="container">
+        <div class="nav-catalog-wrapper">
+            <ul>
+                <li><a href="index.html">Главная</a></li> <span>/</span>
+                <li>Виниловые проигрыватели</li>
+            </ul>
+        </div>
+    </div>
+
+</section>
+
+
+<main>
+  <div class="container">
+    <div class="item-card-wrapper">
+      <article class="card" data-id="0001">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/project_a1_5.png" alt="project_a1_5"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Pro-Ject Automat A1</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">36 999 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket data-id="1">в корзину</button>
+      </article>
+      <article class="card" data-id="0002">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/Sony_PS-LX310BT.png" alt="Sony PS-LX310BT"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Sony PS-LX310BT</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">39 990 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket data-id="2">в корзину</button>
+      </article>
+      <article class="card" data-id="0003">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/technics_sl1200mk7_3.png" alt="Technics SL-1200MK7EG"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Technics SL-1200MK7EG</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">129 990 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article> 
+      <article class="card" data-id="0004">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/AT_LPW50PB_0.png" alt="Audio-Technica AT-LPW50PB"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Audio-Technica AT-LPW50PB</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">54 990 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article>
+      <article class="card" data-id="0005">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/project_debut3_oem5_1.png" alt="Pro-Ject Debut III Phono OM5e Gloss"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Pro-Ject Debut III Phono OM5e Gloss</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">39 499 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article>
+      <article class="card" data-id="0006">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/technics1200g_1.png" alt="Technics SL-1200G"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Technics SL-1200G</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">449 900 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article>
+      <article class="card" data-id="0007">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/AT_LP120XUSB_1.png" alt="Audio-Technica AT-LP120XUSB"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Audio-Technica AT-LP120XUSB</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">44 499 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article> 
+      <article class="card" data-id="0008">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/technics_SL_210MK7EE_5.png" alt="Technics SL-1210MK7EE"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Technics SL-1210MK7EE</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">129 990 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article>
+      <article class="card" data-id="0009">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/yamaha_ttn503_1.png" alt="Yamaha TT-N503"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Yamaha TT-N503</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">77 990 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article>
+      <article class="card" data-id="0010">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/AT_LPW40WN_1.png" alt="Audio-Technica AT-LPW40WN"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Audio-Technica AT-LPW40WN</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">42 190 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article>
+      <article class="card" data-id="0011">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/Crosley_cruiser_Deluxe_navy_0.png" alt="Crosley Cruiser Deluxe Navy"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Crosley Cruiser Deluxe Navy</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">8 990 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article> 
+      <article class="card" data-id="0012">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/at_lp1240_usb_1_FULL.png" alt="Audio-Technica AT-LP1240-USB"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Audio-Technica AT-LP1240-USB</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">107 900 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article>
+      <article class="card" data-id="0013">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/Onkyo_CP_1050_1.png" alt="Onkyo CP-1050"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Onkyo CP-1050</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">79 790 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article>
+      <article class="card" data-id="0014">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/Pro_Ject_Xtension_9_Evolution_4.png" alt="Pro-Ject Xtension 9 Evolution Walnut"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Pro-Ject Xtension 9 Evolution Walnut</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">270 000 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article>
+      <article class="card" data-id="0015">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/PJ_Phono_DebutCarbonDCPhonoUSB_yellow_om10.png" alt="Pro-Ject Debut Carbon Phono USB OM-10 Yellow"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Pro-Ject Debut Carbon Phono USB OM-10 Yellow</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">40 000 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article> 
+      <article class="card" data-id="0016">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/71_kQSSBiPL._SL1500_.png" alt="Crosley Dansette Bermuda CR6233D-BK"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Crosley Dansette Bermuda CR6233D-BK</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">24 990 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article>
+      <article class="card" data-id="0017">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/RPM_1_Carbon.png" alt="Pro-Ject RPM 1 Carbon DC Piano Black"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Pro-Ject RPM 1 Carbon DC Piano Black</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">42 000 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article>
+      <article class="card" data-id="0018">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/project_xtension10_2.png" alt="Pro-Ject Xtension 10 TTA-110 Piano Black"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Pro-Ject Xtension 10 TTA-110 Piano Black</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">400 000 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article>
+      <article class="card" data-id="0019">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/Pro_ject_Signature_10_111.png" alt="Pro-Ject Signature 10 Cadenza Black Piano Black"></a>
+        
+          <div class="name-item-wrapper">
+            <p class="name-item"><a href="#" class="item-name">Pro-Ject Signature 10 Cadenza Black Piano Black</a></p>
+          </div>
+        
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">740 000 &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article> 
+      <article class="card" data-id="0020">
+        <a href="#"><img class='card-image' src="image/card/vinylplayer/denon_dp_200usb_black_887945970_1.png" alt="Denon DP-200USB black"></a>
+        <div class="name-item-wrapper">
+          <p class="name-item"><a href="#" class="item-name">Denon DP-200USB black</a></p>
+        </div>
+        <p class="name-category-card">Проигрыватель</p>
+        <p class="price-item">15 990  &#8381</p>
+        <img data-favorites class="add-favorites" src="image/icon/like.png" alt="favorites">
+        <button data-basket>в корзину</button>
+      </article>
+      
+ 
+    </div>
+  </div>
+</main>
+
+
+<footer>
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="info">
+          <ul>
+            <li class="footer-title">Информация</li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+          <div class="support">
+            <ul>
+              <li class="footer-title">Поддержка</li>
+              <li><a href="#">Помощь покупателю</a></li>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">Возврат</a></li>
+            </ul>
+          </div>
+          <div class="social-media">
+            <ul>
+              <li class="footer-title">Социальные сети</li>
+              <li><a href="#"><img src="image/icon/vk.png" alt="vk">Вконтакте</a></li>
+              <li><a href="#"><img src="image/icon/telegram.png" alt="telegram">Telegram</a></li>
+            </ul>
+          </div>
+      </div>
+      
+    </div>
+  </footer>
+  <div class="btn-up"><img src="image/icon/up.png" alt="up"></div>
+  <script src="JS/burgerMenu.js"></script>
+  <script src="JS/totalBasketPrice.js"></script>
+  <script src="JS/jquery-3.6.4.min.js"></script>
+  <script src="JS/dropdownMenu.js"></script>
+  <script src="JS/showFavoriesButton.js"></script>
+  <script src="JS/favorites.js"></script>
+  <script src="JS/searchBar.js"></script>
+  <script src="JS/openCart.js"></script>
+  <script src="JS/redirectCheckout.js"></script>
+  <script src="JS/toggleBasketStatus.js"></script>
+  <script src="JS/basket01.js"></script>
+  <script src="JS/goTopBtn.js"></script>
+  <!-- <script src="JS/favoritesCounter.js"></script> -->
+  <script src="JS/showFavoritesCounter.js"></script>
+  <script src="JS/showBasketCounter.js"></script>
+ 
+</body>
+
+</html>

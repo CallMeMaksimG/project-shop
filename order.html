@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="shadow" style="position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0.8; z-index: 1; display: none;"></div>
+    <header class="navbar">
+      <div class="container">
+          <div class="nav-wrapper">
+            <button class="burger-btn" id="burger">
+              <span></span><span></span><span></span>
+            </button>
+              <a href="index.html">
+                  <h1 class="title">AUDIO EDEN</h1>
+              </a>
+                <ul class="menu">
+                  <li class="search-burger"><button class="search-brgr" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+                  <li class="account-burger"><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+                    <li><button class="accordion-btn"></button><a href="vinylPlayers.html" class="category">Виниловые проигрыватели</a></li>
+                    <li><button class="accordion-btn"></button><a href="amplifier.html" class="category">Усилители</a></li>
+                    <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="acoustics.html" class="category">Акустика</a>
+                    <ul class="subcategory">
+                        <li><a href="acoustics.html#floor-acoustic">Напольная акустика</a></li>
+                        <li><a href="acoustics.html#bookshelf-acoustic">Полочная акустика</a></li>
+                        <li><a href="acoustics.html#subwoofer-acoustic">Сабвуферы</a></li>
+                        <li><a href="acoustics.html#portable-acoustic">Беспроводная акустика</a></li>
+                    </ul>
+                    </li>
+                    <li class="category-wrapper"><button  class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="vinylRecords.html" class="category">Виниловые пластинки</a>
+                    <ul class="subcategory">
+                      <li><a href="vinylRecords.html#jazz">Джаз</a></li>
+                      <li><a href="vinylRecords.html#classical">Классическая</a></li>
+                      <li><a href="vinylRecords.html#pop">Популярная музыка</a></li>
+                      <li><a href="vinylRecords.html#reggae">Регги</a></li>
+                      <li><a href="vinylRecords.html#rock">Рок</a></li>
+                      <li><a href="vinylRecords.html#hip-hop">Хип-хоп</a></li>
+                      <li><a href="vinylRecords.html#electronic">Электронная</a></li>
+                    </ul>
+                    </li>
+                    <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="accessories.html" class="category">Аксессуары</a>
+                    <ul class="subcategory">
+                      <li><a href="accessories.html#cable">Акустические кабели</a></li>
+                      <li><a href="accessories.html#pickup">Головки звукоснимателя</a></li>
+                      <li><a href="accessories.html#needle">Иглы</a></li>
+                      <li><a href="accessories.html#headshell">Хедшеллы</a></li>
+                    </ul>
+                    </li>
+                    <li><button class="search" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+                </ul>
+                    <ul class="menu-fav-basket">
+                      <li><a href="favorites.html"><img class="nav-icon like" src="image/icon/like.png" alt="like"></a><div class="counter-favorites">0</div></li>
+                      <li>
+                        <div class="basket-all-wrapper">
+                          <img id="basket" class="nav-icon" src="image/icon/basket.png" alt="basket"><div class="counter-total-basket">0</div>
+                      
+                                            <div class="drop-down-basket">
+                          <div class="drop-down-basket-title">
+                            <h3>Корзина</h3>
+                          </div>
+                          <div class="empty-basket">
+                            <img src="image/icon/shopping-bag.jpg" alt="basket">
+                            <p>В корзине пусто</p>
+                          </div>
+                      
+                          <div class="drop-down-basket-item-wrapper">
+                      
+                          </div>
+                          <div class="close-basket"><img src="image/icon/close.png" alt="close"></div>
+                          <div class="footer-drop-down-basket none">
+                            <div class="sum">
+                              <p>Сумма заказа:</p>
+                              <p ><span class="total-price">0</span> <span class="currency">&#8381</span></p>
+                            </div>
+                      
+                            <div class="button-wrapper">
+                              <button id="checkout">Оформить заказ</button>
+                            </div>
+                          </div>
+                      
+                      
+                                            </div>
+                        </div>
+                        <div class="drop-down-basket">
+                            <div class="drop-down-basket-title">
+                              <h3>Корзина</h3>
+                            </div>
+                            <div class="drop-down-basket-item-wrapper">
+                            </div>
+                            <div class="button-wrapper">
+                              <button id="checkout">Оформить заказ</button>
+                            </div>
+                      
+                        </div>
+                      </li>
+                    </ul>
+                    <ul class="account-icon">
+
+                    
+                    <li><a href="enter.html" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+                </ul>
+
+
+                
+                      <div id="search_bar">
+                  
+                  <form>
+                    <input name="search" type="search" placeholder="Поиск">
+                    <button type="submit"><img src="image/icon/search.png" alt=""></button>
+                    <button type="button" id="close" value="Click" onmousedown="closeSearchBar()"> Закрыть </button>
+                  </form>
+                
+              </div>
+</header>
+    <section class="nav-catalog">
+        <div class="container">
+            <div class="nav-catalog-wrapper">
+                <ul>
+                    <li><a href="index.html">Главная</a></li> <span>/</span>
+                    <li>Оформление заказа</li>
+                </ul>
+            </div>
+        </div>
+</section>
+
+<div class="container">
+    <h2 class="order-title">Оформление заказа</h2>
+    <div class="order-wrapper">
+        <table>
+            <thead>
+                <td class="table-title">Наименование</td>
+                <td class="table-title">Количество</td>
+                <td class="table-title">Цена</td>
+                <td></td>
+            </thead>
+            <tbody class="order-table">
+
+            </tbody>
+        </table>
+        
+        <div class="sum-order">
+            <p>Сумма заказа:</p>
+            <p><span class="total-price-order"></span> <span class="currency">&#8381;</span></p>
+        </div>
+    </div>
+    
+    <div class="order-form-wrapper">
+     <form class="form-order">
+            <h3><a id="personal-info">Персональные данные</a></h3>
+            <label for="account-last-name">Фамилия</label>
+                              <input autocomplete name="surname" placeholder="Введите фамилию" type="text" id="account-last-name">
+                                <label for="account-first-name">Имя</label>
+                                <input autocomplete name="name" placeholder="Введите имя"  type="text" id="account-first-name">
+                                <label for="account-patronymic">Отчество</label>
+                                <input autocomplete name="patronymic" placeholder="Введите отчество" type="text" id="account-patronymic">
+                                <label for="account-phone">Мобильный телефон</label>
+                                <input autocomplete name="phone_number" placeholder="Введите номер телефона"  type="text" id="account-phone">
+                                <h3><a id="address">Адрес</a></h3>
+                                <label for="account-city">Город</label>
+                                <input autocomplete name="city" placeholder="Введите город" type="text" id="account-city">
+                                <label for="account-address">Адрес</label>
+                                <input autocomplete name="address" placeholder="Улица, дом, корпус, строение, квартира" type="text" id="account-address">
+                                <h3>Способ доставки</h3>
+                                <div class="delivery-method">
+                                    <input type="radio" id="pochta" name="delivery" value="1">
+                                    <label for="pochta">Доставка почтой <br><span>Бесплатно</span></label>
+                                </div>
+        
+                                <div class="delivery-method">
+                                    <input type="radio" id="transport-company-point" name="delivery" value="2">
+                                    <label for="transport-company-point">Транспортной компанией в пункт выдачи <br><span>Бесплатно</span></label>
+                                </div>
+                                <div class="delivery-method">
+                                    <input type="radio" id="transport-company" name="delivery" value="3">
+                                    <label for="transport-company">Доставка курьером <br><span>Бесплатно</span></label>
+                                </div>
+                                <div class="delivery-method">
+                                    <input type="radio" id="pickup-delivery" name="delivery" value="4">
+                                    <label for="pickup-delivery">Самовывоз из пункта выдачи <br><span>Только для Санкт-Петербурга</span></label>
+                                </div>
+                                <div class="textarea-wrapper">
+                                    <label for="comment">Комментарий к заказу (не обязательно)</label>
+                                    <textarea name="comment" id="comment" placeholder="Комментарий к заказу..."></textarea>
+                                </div>
+                                <h3>Способ оплаты</h3>
+                                <div class="payment-method">
+                                    <input type="radio" id="cash" name="payment" value="1">
+                                    <label for="cash">Наличные / Наложенный платеж</label>
+                                    <img src="image/icon/cash.png" alt="cash">
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" id="bank-card" name="payment" value="2">
+                                    <label for="bank-card">Банковская карта</label>
+                                    <img src="image/icon/credit-card.png" alt="cash">
+                                </div>
+                                <input type="submit" id="submit-order" name="submit-order" value="Подтвердить заказ">
+        </form>
+        <?php
+    }
+    
+?>
+    </div>
+        
+        </div>
+    </div>
+
+</div>
+
+
+    <footer>
+        <div class="container">
+          <div class="footer-wrapper">
+            <div class="info">
+              <ul>
+                <li class="footer-title">Информация</li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Политика конфиденциальности</a></li>
+              </ul>
+            </div>
+              <div class="support">
+                <ul>
+                  <li class="footer-title">Поддержка</li>
+                  <li><a href="#">Помощь покупателю</a></li>
+                  <li><a href="#">Доставка и оплата</a></li>
+                  <li><a href="#">Возврат</a></li>
+                </ul>
+              </div>
+              <div class="social-media">
+                <ul>
+                  <li class="footer-title">Социальные сети</li>
+                  <li><a href="#"><img src="image/icon/vk.png" alt="vk">Вконтакте</a></li>
+                  <li><a href="#"><img src="image/icon/telegram.png" alt="telegram">Telegram</a></li>
+                </ul>
+              </div>
+          </div>
+          
+        </div>
+      </footer>
+      <div class="preloader"></div>
+      <div class="btn-up"><img src="image/icon/up.png" alt="up"></div>
+      <script src="JS/order.js"></script>
+      <script src="JS/totalBasketPrice.js"></script>
+    <script src="JS/burgerMenu.js"></script>
+    <script src="JS/jquery-3.6.4.min.js"></script>
+    <script src="JS/dropdownMenu.js"></script> 
+    <script src="JS/searchBar.js"></script>
+    <script src="JS/favorites.js"></script>
+    <script src="JS/toggleBasketStatus.js"></script>
+    <script src="JS/openCart.js"></script>
+    <script src="JS/dropdownBasketForOtherPages.js"></script>
+    <script src="JS/redirectCheckout.js"></script>
+    <script src="JS/goTopBtn.js"></script>
+    <script src="JS/showFavoritesCounter.js"></script>
+    <script src="JS/showBasketCounter.js"></script>
+    <script src="JS/preloader.js"></script>
+
+</body>
+</html>

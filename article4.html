@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>На что обратить внимание при покупке проигрывателя?</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="image/icon/favicon-32x32.png">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="shadow" style="position: fixed; left: 0; top: 0; height: 100vh; width: 100vw; background: #000; opacity: 0.8; z-index: 1; display: none;"></div>
+    <header class="navbar">
+      <div class="container">
+          <div class="nav-wrapper">
+            <button class="burger-btn" id="burger">
+              <span></span><span></span><span></span>
+            </button>
+              <a href="index.html">
+                  <h1 class="title">AUDIO EDEN</h1>
+              </a>
+                <ul class="menu">
+                  <li class="search-burger"><button class="search-brgr" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+                  <li class="account-burger"><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+                    <li><button class="accordion-btn"></button><a href="vinylPlayers.php" class="category">Виниловые проигрыватели</a></li>
+                    <li><button class="accordion-btn"></button><a href="amplifier.php" class="category">Усилители</a></li>
+                    <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="acoustics.php" class="category">Акустика</a>
+                    <ul class="subcategory">
+                        <li><a href="acoustics.php#floor-acoustic">Напольная акустика</a></li>
+                        <li><a href="acoustics.php#bookshelf-acoustic">Полочная акустика</a></li>
+                        <li><a href="acoustics.php#subwoofer-acoustic">Сабвуферы</a></li>
+                        <li><a href="acoustics.php#portable-acoustic">Беспроводная акустика</a></li>
+                    </ul>
+                    </li>
+                    <li class="category-wrapper"><button  class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="vinylRecords.php" class="category">Виниловые пластинки</a>
+                    <ul class="subcategory">
+                      <li><a href="vinylRecords.php#jazz">Джаз</a></li>
+                      <li><a href="vinylRecords.php#classical">Классическая</a></li>
+                      <li><a href="vinylRecords.php#pop">Популярная музыка</a></li>
+                      <li><a href="vinylRecords.php#reggae">Регги</a></li>
+                      <li><a href="vinylRecords.php#rock">Рок</a></li>
+                      <li><a href="vinylRecords.php#hip-hop">Хип-хоп</a></li>
+                      <li><a href="vinylRecords.php#electronic">Электронная</a></li>
+                    </ul>
+                    </li>
+                    <li class="category-wrapper"><button class="accordion-btn"><img data-down src="image/icon/next-small.png" alt=""></button><a href="accessories.php" class="category">Аксессуары</a>
+                    <ul class="subcategory">
+                      <li><a href="accessories.php#cable">Акустические кабели</a></li>
+                      <li><a href="accessories.php#pickup">Головки звукоснимателя</a></li>
+                      <li><a href="accessories.php#needle">Иглы</a></li>
+                      <li><a href="accessories.php#headshell">Хедшеллы</a></li>
+                    </ul>
+                    </li>
+                    <li><button class="search" value="Click" onmousedown="openSearchBar()"><img class="nav-icon"  src="image/icon/search.png"><span class="search-text">Поиск</span></button></li>
+                </ul>
+                    <ul class="menu-fav-basket">
+                      <li><a href="favorites.html"><img class="nav-icon like" src="image/icon/like.png" alt="like"></a><div class="counter-favorites">0</div></li>
+                      <li>
+                        <div class="basket-all-wrapper">
+                          <img id="basket" class="nav-icon" src="image/icon/basket.png" alt="basket"><div class="counter-total-basket">0</div>
+                      
+                                            <div class="drop-down-basket">
+                          <div class="drop-down-basket-title">
+                            <h3>Корзина</h3>
+                          </div>
+                          <div class="empty-basket">
+                            <img src="image/icon/shopping-bag.jpg" alt="basket">
+                            <p>В корзине пусто</p>
+                          </div>
+                      
+                          <div class="drop-down-basket-item-wrapper">
+                      
+                          </div>
+                          <div class="close-basket"><img src="image/icon/close.png" alt="close"></div>
+                          <div class="footer-drop-down-basket none">
+                            <div class="sum">
+                              <p>Сумма заказа:</p>
+                              <p ><span class="total-price">0</span> <span class="currency">&#8381</span></p>
+                            </div>
+                      
+                            <div class="button-wrapper">
+                              <button id="checkout">Оформить заказ</button>
+                            </div>
+                          </div>
+                      
+                      
+                                            </div>
+                        </div>
+                        <div class="drop-down-basket">
+                            <div class="drop-down-basket-title">
+                              <h3>Корзина</h3>
+                            </div>
+                            <div class="drop-down-basket-item-wrapper">
+                            </div>
+                            <div class="button-wrapper">
+                              <button id="checkout">Оформить заказ</button>
+                            </div>
+                      
+                        </div>
+                      </li>
+                    </ul>
+                    <ul class="account-icon">
+
+                    
+                    <li><a href="enter.php" class="account-header-wrapper"><img class="nav-icon account" src="image/icon/user.png" alt="user"><span class="text-account">Аккаунт</span></a></li>
+                </ul>
+
+
+                
+                      <div id="search_bar">
+                  
+                  <form action="search.php" method="post">
+                    <input type="search" name="search" placeholder="Поиск">
+                    <button type="submit"><img src="image/icon/search.png" alt=""></button>
+                    <button type="button" id="close" value="Click" onmousedown="closeSearchBar()"> Закрыть </button>
+                  </form>
+                
+              </div>
+</header>
+<section class="nav-catalog">
+    <div class="container">
+        <div class="nav-catalog-wrapper">
+            <ul>
+                <li><a href="index.html">Главная</a></li> <span>/</span>
+                <li><a href="blog.html">Блог</a></li> <span>/</span>
+                <li>На что обратить внимание при покупке проигрывателя?</li>
+            </ul>
+        </div>
+    </div>
+</section>
+<main>
+    <article>
+        <div class="container">
+            <div class="article-wrapper">
+                <h1>На что обратить внимание при покупке проигрывателя?</h1>
+                <img class="main-image-article" src="image/article/vinylrecorder.jpg" alt="vinylrecorder">
+                <div class="text-article">
+                    <p>В первую очередь стоит учесть, что для прослушивания винила одного проигрывателя недостаточно. Набор необходимых устройств
+                        выглядит так: проигрыватель, фонокорректор, усилитель, колонки. Без них воспроизводить пластинки будет попросту не во что.</p>
+                    <p>Многие непрофессиональные проигрыватели имеют встроенный фонокорректор. Такую модель стоит брать, если вы не рассчитываете на 
+                        апгрейд своей виниловой аудиосистемы в будущем.</p>
+                    <p>Существуют и проигрыватели, совмещающие в себе всё необходимое для воспроизведения пластинок. Обращать на них внимание мы не 
+                        рекомендуем. Дело в том, что проигрыватели all inclusive, как правило, очень низкого класса, а цены на электрофоны приемлемого 
+                        качества очень высоки. Чёрный список виниловых меломанов возглавляют бюджетные проигрыватели фирм ION, WATSON, Crosley.</p>
+                    <p>Экономьте на выборе проигрывателя с умом. Помните: приобретая бюджетный аппарат, не удостоверившись в его качестве, вы рискуете 
+                        испортить свои пластинки.</p>
+                </div>
+                <div class="other-image-article">
+                    <img class="no-margin-left" src="image/article/audioplayer.jpg" alt="audioplayer">
+                    <img src="image/article/amplifier.jpg" alt="amplifier">
+                </div>
+                <div class="text-article">
+                    <h2>Устройство проигрывателя</h2>
+                    <p>
+                        <ol>
+                            <li>Планшайба (опорный диск, блин) — диск, на который кладётся пластинка.</li>
+                            <li>Тонарм — рычаг, к которому крепится картридж с иглой.</li>
+                            <li>Противовес — грузик, который позволяет балансировать тонарм и регулировать прижимную силу иглы.</li>
+                            <li>Антискейтинг — регулировка компенсатора скатывающей силы.</li>
+                            <li>Картридж (головка звукоснимателя) — одна из самых важных частей проигрывателя, отвечающая за считывание музыки с пластинки.</li>
+                        </ol>
+                    </p>
+                </div>
+                <img class="main-image-article" src="image/article/audioplayer2.jpg" alt="audioplayer">
+                <div class="text-article">
+                    <h2>Ключевые факторы при оценке проигрывателя</h2>
+                    <h3>Вес</h3>
+                    <p>Хороший проигрыватель должен иметь приличный вес. Как правило, устройства весом менее 7 кг предназначены для самых невзыскательных аудиофилов. 
+                        В частности, тяжёлой должна быть планшайба проигрывателя. Некоторые современные производители стали делать блины и тонармы из карбона. Карбон 
+                        является относительно лёгким материалом, поэтому такие проигрыватели могут сохранить качество и при малом весе.</p>
+                    <h3>Регулировка давления иглы и скатывающей силы (антискейтинга)</h3>
+                    <p>Наличие данных опций говорит о высоком классе проигрывателя.</p>
+                    <h3>Картридж</h3>
+                    <p>Картриджи бывают двух видов: ½ дюйма и T4P. Первый вид подразумевает высокий класс устройства и возможность модернизации проигрывателя. Минус этих 
+                        картриджей состоит в сложности настройки: если любитель сумеет правильно настроить балансировку тонарма и прижимную силу иглы, то для корректной 
+                        юстировки картриджа по шаблону может понадобиться помощь профессионала. T4P-картриджи проще в эксплуатации: они крепятся одним болтом, имеют одинаковую 
+                        массу, прижимную силу и вынос иглы.</p>
+                    <h3>Тип заточки иглы</h3>
+                    <p>Как правило, на бюджетных вариантах установлены сферические иглы. Любители винила со стажем обычно отдают предпочтение иглам с эллиптической заточкой. 
+                        Существуют и другие варианты заточки игл.</p>
+                    <h3>Возможность замены картриджа</h3>
+                    <p>Качественный проигрыватель должен поддерживать замену иглы и картриджа. После приобретения устройства картридж стоит заменить: как правило, изначально 
+                        проигрыватели продаются с бюджетными (а в случае покупки подержанного устройства — изношенными) комплектующими. Также стоит позаботиться о доступности 
+                        заменяемых элементов, так как они неуниверсальны.</p>
+                    <h3>Физический принцип работы картриджа</h3>
+                    <p>Разделяют два вида головок: MM- и MC-головки. Мы не будем углубляться в нюансы работы этих видов картриджей, лишь скажем, что подавляющее большинство 
+                        аудиофилов отдаёт предпочтение MC-головкам из-за более мягкой и подробной передачи звука. Большинство из таких головок, к сожалению, не поддерживают 
+                        замену иглы, так что менять придётся весь картридж.</p>
+                    <h3>Привод проигрывателя</h3>
+                    <p>Различают три вида привода: прямой, ременный (пассиковый) и роликовый. Данная характеристика отвечает за механический принцип, по которому наша планшайба 
+                        приходит в движение при проигрывании пластинки.</p>
+                    <p>Прямой привод подойдёт для скретчинга и прочих диджейских штучек.</p>
+                    <p>Меломаны же чаще отдают предпочтение ременному приводу: в большинстве случаев он обеспечивает более равномерное вращение диска и меньший коэффициент детонации.</p>
+                    <p>Роликовый привод является наименее распространённым из-за высокого уровня вибрации, передаваемой диску от двигателя. Впрочем, есть примеры качественных проигрывателей 
+                        с роликовым механизмом, работа которых не вызывает нареканий, а свои поклонники есть у всех типов приводов.</p>
+                </div>
+                <a href="https://lifehacker.ru/vinyl-player-guide/" target="_blank">Источник</a>
+            </div>
+        </div>
+    </article>
+</main>
+
+<footer>
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="info">
+          <ul>
+            <li class="footer-title">Информация</li>
+            <li><a href="blog.html">Блог</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+          <div class="support">
+            <ul>
+              <li class="footer-title">Поддержка</li>
+              <li><a href="#">Помощь покупателю</a></li>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">Возврат</a></li>
+            </ul>
+          </div>
+          <div class="social-media">
+            <ul>
+              <li class="footer-title">Социальные сети</li>
+              <li><a href="#"><img src="image/icon/vk.png" alt="vk">Вконтакте</a></li>
+              <li><a href="#"><img src="image/icon/telegram.png" alt="telegram">Telegram</a></li>
+            </ul>
+          </div>
+      </div>
+      
+    </div>
+  </footer>
+  <div class="btn-up"><img src="image/icon/up.png" alt="up"></div>
+  <script src="JS/burgerMenu.js"></script>
+  <script src="JS/jquery-3.6.4.min.js"></script>
+  <script src="JS/toggleBasketStatus.js"></script>
+  <script src="JS/dropdownBasketForOtherPages.js"></script>
+  <script src="JS/openCart.js"></script>
+  <script src="JS/dropdownMenu.js"></script>
+  <script src="JS/redirectCheckout.js"></script>
+  <script src="JS/searchBar.js"></script>
+  <script src="JS/favorites.js"></script>
+  <script src="JS/goTopBtn.js"></script>
+  <script src="JS/showFavoritesCounter.js"></script>
+  <script src="JS/showBasketCounter.js"></script>
+</body>
+</html>
