@@ -26,17 +26,6 @@ input {
 .nav-catalog {
   margin-top: 80px;
 }
-/* .shadow {
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  background: #000;
-  opacity: 0.8;
-  z-index: 1;
-  display: none;
-} */
 
 /* ПОИСК */
 #search_bar {
@@ -69,6 +58,7 @@ input {
   background-color: white;
   cursor: pointer;
   border: none;
+  color: #000;
 }
 .search-brgr{
   height: 40px;
@@ -137,6 +127,7 @@ form {
   height: 40px;
   border: none;
   background-color: white;
+  overflow: auto;
   display: none;
 }
 .burger-btn span{
@@ -343,6 +334,9 @@ color: #807f7d;
   
 }
 @media (max-width: 1240px) {
+  body.lock {
+    overflow: hidden;
+  }
   .burger-btn{
     display: block;
   }
@@ -385,6 +379,7 @@ color: #807f7d;
 
   .search-text{
     display: inline-block;
+    color: #000;
   }
   
  
@@ -606,6 +601,10 @@ color: #807f7d;
   }
   .menu-fav-basket {
     margin-right: 5px;
+    margin-bottom: 6px;
+  }
+  .counter-favorites {
+    margin-top: 23px!important;
   }
 }
 
@@ -667,7 +666,8 @@ color: #807f7d;
   color: #f2f2f2;
   padding: 8px 12px;
   position: absolute;
-  bottom: 200px;
+  transform: translateY(-70%);
+  bottom: 30%;
   width: 100%;
   text-align: center;
   text-transform: uppercase;
@@ -1068,17 +1068,14 @@ section>.container>h1 {
   margin-right: auto;
   text-align: center;
   border: 1px solid #1cb362;
-  /* width: 35%; */
   padding: 15px;
   border-radius: 3px;
   color: #505050;
   font-weight: 300;
   font-size: 14px;
-  /* max-height: 0px; */
 }
 .enter-message.show{
   display: block;
-  /* max-height: fit-content; */
 }
 .reg-message{
   margin: 0;
@@ -1088,7 +1085,6 @@ section>.container>h1 {
   margin-right: auto;
   text-align: center;
   border: 1px solid #1cb362;
-  /* width: 36%; */
   padding: 15px;
   border-radius: 3px;
   color: #505050;
@@ -1201,13 +1197,11 @@ section>.container>.reg-title {
   display: flex;
 }
 .account-info-wrapper{
-  /* width: 80%; */
   display: flex;
   justify-content: center;
 }
 .account-nav{
   width: 20%;
-  /* display: flex; */
   justify-content: flex-end;
 }
 .account-nav ul{
@@ -1504,33 +1498,6 @@ main .container h2{
 }
 
 
-/* КОНТАКТЫ
-.contacts-wrapper{
-  display: flex;
-  justify-content: space-between;
-}
-.contacts-title {
-  text-align: center;
-  font-size: 28px;
-  font-weight: 300;
-  text-transform: uppercase;
-  margin: 40px 0 40px 0;
-}
-.contacts-info{
-  width: 48%;
-  height: 500px;
-}
-.contacts-map {
-  width: 48%;
-  height: 500px;
-}
-.contacts-info p {
-  font-weight: 300;
-}
-.contacts-info>h2 {
-  margin-top: 0!important;
-} */
-
 /* ВЫПАДАЮЩАЯ КОРЗИНА */
 .basket-all-wrapper{
   position: relative;
@@ -1706,7 +1673,6 @@ main .container h2{
   display: none;
   align-items: center;
   justify-content: center;
-  /* transition: .4s; */
   z-index: 1000; 
 }
 
@@ -1719,15 +1685,12 @@ main .container h2{
 }
 .btn-up img{
   width: 15px;
-  /* padding: 5px 17px; */
-  /* margin-top: 5px; */
 }
 
 
 /* ОФОРМЛЕНИЕ ЗАКАЗА */
 
 .order-wrapper {
-  /* width: 60%; */
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -1774,8 +1737,6 @@ main .container h2{
   
 }
 
-
-
 .order-wrapper ul {
   display: flex;
   list-style: none;
@@ -1788,10 +1749,8 @@ main .container h2{
 }
 .order-item{
   display: flex;
-  /* justify-content: space-between; */
 }
 .info-item-wrapper-order {
-  /* width: 50%; */
   display: flex;
   align-items: center;
   margin: auto;
@@ -1801,7 +1760,6 @@ main .container h2{
   align-items: center;
   justify-content: center;
   min-width: 100px;
-  /* margin-left: 110px; */
 }
 .order-price-wrapper p {
   font-size: 20px;
@@ -1815,7 +1773,6 @@ main .container h2{
   align-items: center;
   justify-content: center;
   margin: auto;
-  /* margin-left: 70px; */
 }
 .counter-control-order{
   width: 25px;
@@ -1837,9 +1794,7 @@ background: #cecdcb;
   margin: auto;
   width: 25px;
   height: 25px;
-  /* border: 1px solid black; */
   border-radius: 50%;
-  /* transform: translateY(25px); */
   background-color: #aeaead;
   cursor: pointer;
   transition: 0.4s;
@@ -1860,15 +1815,13 @@ background: #cecdcb;
 }
 .sum-order p {
   font-size: 18px;
-    /* margin-left: 10px; */
-    font-weight: 300;
+  font-weight: 300;
 }
 .total-price-order {
   font-size: 20px;
   font-weight: 400;
 }
 .delivery-method {
-  /* border: 1px solid black; */
   margin-bottom: 10px;
   padding: 15px;
   border-radius: 3px;
@@ -1883,7 +1836,6 @@ background: #cecdcb;
   background: white;
 }
 .delivery-method label {
-  /* margin-left: 10px; */
   cursor: pointer;
 }
 .delivery-method span {
@@ -1938,7 +1890,6 @@ background: #cecdcb;
 }
 
 .payment-method {
-  /* border: 1px solid black; */
   margin-bottom: 10px;
   padding: 5px 15px 10px 15px;
   border-radius: 3px;
@@ -1981,7 +1932,6 @@ background: #cecdcb;
 }
 .payment-method img {
   width: 20px;
-  /* display: block; */
   margin-left: auto;
   transform: translateY(6px);
   opacity: 0.5;
@@ -2017,12 +1967,10 @@ background: #cecdcb;
   top: 30%;
   transform: translateX(-50%);
   left: 50%;
-  /* transform: translateY(-50%); */
   margin: left;
   z-index: 9999;
   border-radius: 3px;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-  /* padding: 10px 25px; */
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -2076,13 +2024,8 @@ background: #cecdcb;
 }
 
 
-
-
-
-
 .pay-container {
   display: flex;
-  /* flex-direction: column; */
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -2096,15 +2039,11 @@ background: #cecdcb;
 }
 .pay-form {
   flex-direction: column;
-  /* padding: 10px; */
 }
 .pay-form input {
   height: 45px;
   width: 90%;
   padding: 5px;
-  /* border-top: none;
-  border-left: none;
-  border-right: none; */
   border: none;
   margin: auto;
   font-size: 18px;
@@ -2130,7 +2069,6 @@ background: #cecdcb;
   width: 100%;
 }
 .date-cvc-wrapper{
-  /* border: 1px solid black; */
   display: flex;
 }
 
@@ -2165,16 +2103,13 @@ background: #cecdcb;
   position: absolute;
   top: 0;
   margin-left: 35px;
-  /* right: 0; */
   margin-top: 17px;
-  /* right: 0; */
   display: none;
   align-items: center;
   justify-content: center;
   color: white;
   font-weight: 300;
   font-size: 12px;
-  /* display: none; */
 }
 .counter-favorites.show {
   display: flex;
