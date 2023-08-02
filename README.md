@@ -9,4 +9,5 @@
 - JavaScript;
 - jQuery
 
+[Project-shop](callmemaksimg.github.io/project-shop/)
 
