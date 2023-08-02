@@ -9,5 +9,5 @@
 - JavaScript;
 - jQuery
 
-[Project-shop](callmemaksimg.github.io/project-shop/)
+[Project-shop](https://callmemaksimg.github.io/project-shop/)
 
